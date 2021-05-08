@@ -11,6 +11,7 @@ import Show7 from './com/Show7';
 
 import Show9 from './com/Show9';
 import Foot from './com/foot';
+import Cookiecheck from './com/cookiemsg';
 
 function App() {
 
@@ -30,6 +31,7 @@ function App() {
       <Show7 />
       <Show9 />
       <Foot />
+      <Cookiecheck />
     </div>
   );
 }
