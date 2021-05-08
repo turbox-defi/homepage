@@ -1,0 +1,138 @@
+.box {
+    width: 100%;
+    background: #1A1F33;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.content {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.intbox {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    img {
+        width: 200px;
+    }
+}
+
+.logolist {
+    margin: 50px auto;
+    text-align: center;
+    img {
+        width: 80%;
+        max-width: 711px;
+    }
+}
+
+.foot {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &>span:nth-child(1) {
+        color: #ffffff;
+        font-size: 16px;
+    }
+    &>img {
+        width: 86px;
+        margin: 0 30px;
+    }
+    &>span:nth-child(3) {
+        display: block;
+        width: 100px;
+        height: 26px;
+        line-height: 24px;
+        background: #1A1F33;
+        border: 1px solid #0260FE;
+        text-align: center;
+        color: #0260FE;
+        font-size: 14px;
+        border-radius: 20px
+    }
+}
+
+.inputbox {
+    display: flex;
+    &>div:nth-child(1) {
+        width: 281px;
+        height: 49px;
+        background: #1A1F33;
+        border: 1px solid #8F92AA;
+        border-radius: 3px;
+        input {
+            margin: 0;
+            padding: 0;
+            &:focus {
+                outline: none;
+            }
+            width: 100%;
+            height: 100%;
+            background: transparent;
+            border: 0;
+            color: #ffffff;
+            padding-left: 20px;
+            font-size: 16px;
+        }
+    }
+    &>div:nth-child(2) {
+        width: 128px;
+        height: 49px;
+        background: #025FFF;
+        border-radius: 3px;
+        text-align: center;
+        line-height: 49px;
+        color: #ffffff;
+        font-size: 16px;
+        cursor: pointer;
+        margin-left: 5px;
+    }
+    &>div:nth-child(2):hover {
+        opacity: 0.9;
+    }
+}
+
+@media screen and (max-width:560px) {
+    .box {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+    .logolist {
+        margin: 20px 0;
+    }
+    .intbox {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+    .inputbox {
+        align-items: center;
+        flex-direction: column;
+        margin-top: 20px;
+        &>div:nth-child(2) {
+            margin-top: 20px;
+        }
+    }
+    .foot {
+        align-items: center;
+        flex-direction: column;
+        &>span,
+        img {
+            margin-top: 20px;
+        }
+        &>span:nth-child(1) {
+            font-size: 10px;
+        }
+    }
+}
+
+@media screen and (min-width:1200px) {
+    .content {
+        width: 1200px;
+    }
+}

@@ -1,0 +1,100 @@
+.line {
+    display: block;
+    border-bottom: 1px dashed #666666;
+    margin: 20px 0;
+    width: 100%;
+}
+
+.box {
+    background-color: #0F1527;
+    padding-bottom: 100px;
+    h2 {
+        font-weight: 400;
+        color: #8F92AA;
+        font-size: 26px;
+        text-align: center;
+    }
+    .content {
+        width: 100%;
+        margin: 0 auto;
+        .msg {
+            font-size: 16px;
+            font-weight: 400;
+            color: #FFFFFF;
+            line-height: 20px;
+            text-align: center;
+        }
+    }
+    .list {
+        display: flex;
+        justify-content: space-around;
+        margin-top: 180px;
+        flex-wrap: wrap;
+        &>div {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            width: 300px;
+            img {
+                width: 80%;
+            }
+            h3 {
+                color: #FFFFFF;
+                margin: 30px 0;
+            }
+            p {
+                color: #8F92AA;
+                text-align: center;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:560px) {
+    .box {
+        .content {
+            width: 100%;
+            .msg {
+                font-size: 12px;
+                line-height: 14px
+            }
+        }
+        .list {
+            flex-wrap: wrap;
+            &>div {
+                width: 150px;
+                margin-top: 30px;
+                h3 {}
+                p {}
+            }
+        }
+    }
+}
+
+@media screen and (min-width:1200px) {
+    .box {
+        .content {
+            width: 80%;
+            min-width: 1200px;
+            .msg {
+                font-size: 40px;
+                line-height: 60px;
+            }
+        }
+        .list {
+            &>div {
+                width: calc( 100% / 4 - 50px);
+                min-width: 200px;
+                max-width: 300px;
+                h3 {
+                    font-size: 24px;
+                    line-height: 26px;
+                }
+                p {
+                    font-size: 18px;
+                    line-height: 26px;
+                }
+            }
+        }
+    }
+}
