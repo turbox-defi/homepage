@@ -18,6 +18,6 @@ ReactDOM.render(
 
 
 window.goExChange = () => {
-  const url = `http://major7.chordlabs.info`;
+  const url = `http://exchange.turbox.io`;
   window.location.href = url;
 }
