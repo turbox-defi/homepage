@@ -7,7 +7,7 @@ export default () => {
         <>
             <div className={styles.box}>
                 <h2>
-                    DeFi Swap Aggregator
+                    Swap Aggregator
                 </h2>
                 <p>
                 TurboX Swap Aggregator for Defi ecosystem that provides the best price and user experience for trading of crypto currencies.
