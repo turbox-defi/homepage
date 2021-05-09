@@ -48,7 +48,7 @@ export default () => {
                         <div>
                             <img src={img4} alt="img" />
                             <h3>
-                            Project Analyzer
+                            Assets Viewer
                             </h3>
                             <p>
                             an integrated viewer to display in real time the precise yield of the Defi projects user has invested

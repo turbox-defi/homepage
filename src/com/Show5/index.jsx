@@ -35,7 +35,7 @@ export default () => {
                             <img src={uosvg} alt="up"/>
                         </span>
                         <span>
-                            Better algorithm
+                        Performance improved
                         </span>
                     </div>
                 </div>
