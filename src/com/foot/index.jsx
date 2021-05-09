@@ -1,4 +1,4 @@
-import styles from './style.module.scss';
+import styles from './style.module.less';
 import svg1 from './telegram-plane.svg';
 import svg2 from './medium.svg';
 import svg3 from './GitHub.svg';

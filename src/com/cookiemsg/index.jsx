@@ -2,7 +2,7 @@
  * cookie
  */
 import { useEffect, useState, useCallback } from "react";
-import styles from "./style.module.scss";
+import styles from "./style.module.less";
 
 const _goPDF = () => {
   

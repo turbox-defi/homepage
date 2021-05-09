@@ -1,4 +1,4 @@
-import styles from './style.module.scss';
+import styles from './style.module.less';
 import logoimg from '../img/logo.png';
 import logolist from '../img/logolist.png';
 import certikLogo from '../img/certik_logo.png';

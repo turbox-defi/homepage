@@ -1,4 +1,4 @@
-import styles from './style.module.scss';
+import styles from './style.module.less';
 import img1 from '../img/icon1.png';
 import img2 from '../img/icon2.png';
 import img3 from '../img/icon3.png';

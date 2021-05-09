@@ -1,4 +1,4 @@
-import styles from './style.module.scss';
+import styles from './style.module.less';
 import uosvg from './up.svg';
 
 export default () => {
