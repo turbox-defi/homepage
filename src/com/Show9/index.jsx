@@ -1,7 +1,11 @@
-import styles from './style.module.scss';
+import styles from './style.module.less';
 import logoimg from '../img/logo.png';
 import logolist from '../img/logolist.png';
 import certikLogo from '../img/certik_logo.png';
+
+const _click = () =>  {
+    window.open('https://bscscan.com/address/0x3960e4fa3c0d79dcc6e33b4fc9f1c1c88ab7b849')
+}
 
 export default () => {
 
@@ -29,7 +33,7 @@ export default () => {
                     </div>
                     <div className={styles.foot}>
                         <span>
-                        Contract:0xe098b2ce062c81dc9d6d7504801b86f672cc8ddc
+                        Contract:<a onClick={_click} className={styles.href}>0x3960e4fa3c0d79dcc6e33b4fc9f1c1c88ab7b849</a>
                         </span>
                         <img src={certikLogo} alt="logo"/>
                         <span>

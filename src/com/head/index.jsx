@@ -1,4 +1,4 @@
-import styles from './style.module.scss';
+import styles from './style.module.less';
 
 import logoimg from '../img/logo.png';
 
@@ -17,15 +17,15 @@ export default () => {
                     <span style={{ color: '#3CFFFC' }}>
                         Home
                     </span>
-                    <span onClick={_click.bind(this,'https://www.baidu.com')}>
+                    <span onClick={_click.bind(this,'https://exchange.turbox.io')}>
                         Exchange
                     </span>
-                    <span onClick={_click.bind(this,'https://www.baidu.com')}>
+                    <span onClick={_click.bind(this,'http://docs.turbox.io')}>
                         FAQ
                     </span>
-                    <span onClick={_click.bind(this,'https://www.baidu.com')}>
+                    {/* <span onClick={_click.bind(this,'http://www.baidu.com')}>
                         Blog
-                    </span>
+                    </span> */}
                 </div>
             </div>
         </>

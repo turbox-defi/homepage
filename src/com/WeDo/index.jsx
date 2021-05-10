@@ -1,4 +1,4 @@
-import styles from './style.module.scss';
+import styles from './style.module.less';
 import img1 from '../img/icon1.png';
 import img2 from '../img/icon2.png';
 import img3 from '../img/icon3.png';
@@ -48,7 +48,7 @@ export default () => {
                         <div>
                             <img src={img4} alt="img" />
                             <h3>
-                            Project Analyzer
+                            Assets Viewer
                             </h3>
                             <p>
                             an integrated viewer to display in real time the precise yield of the Defi projects user has invested

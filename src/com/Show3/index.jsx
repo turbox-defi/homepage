@@ -1,4 +1,4 @@
-import styles from './style.module.scss';
+import styles from './style.module.less';
 import img1 from '../img/show3.png';
 
 export default () => {

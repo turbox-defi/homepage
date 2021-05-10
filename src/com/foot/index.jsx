@@ -1,4 +1,4 @@
-import styles from './style.module.scss';
+import styles from './style.module.less';
 import svg1 from './telegram-plane.svg';
 import svg2 from './medium.svg';
 import svg3 from './GitHub.svg';
@@ -22,7 +22,7 @@ export default () => {
             <div className={styles.iconlist}>
               <img src={svg1} onClick={goBlack.bind(this,'https://t.me/turboXnetwork')} alt='icon'/>
               <img src={svg2}  alt='icon'/>
-              <img src={svg3}  alt='icon'/>
+              <img src={svg3} onClick={goBlack.bind(this,'https://github.com/turbox-defi')} alt='icon'/>
               <img src={svg4}  alt='icon'/>
               <img src={svg5}  alt='icon'/>
             </div>

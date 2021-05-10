@@ -1,4 +1,4 @@
-import styles from './style.module.scss';
+import styles from './style.module.less';
 import uosvg from './up.svg';
 
 export default () => {
@@ -7,7 +7,7 @@ export default () => {
         <>
             <div className={styles.box}>
                 <h2>
-                    DeFi Swap Aggregator
+                    Swap Aggregator
                 </h2>
                 <p>
                 TurboX Swap Aggregator for Defi ecosystem that provides the best price and user experience for trading of crypto currencies.
@@ -35,7 +35,7 @@ export default () => {
                             <img src={uosvg} alt="up"/>
                         </span>
                         <span>
-                            Better algorithm
+                        Performance improved
                         </span>
                     </div>
                 </div>

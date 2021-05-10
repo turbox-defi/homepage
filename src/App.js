@@ -8,9 +8,10 @@ import Show4 from './com/Show4';
 import Show5 from './com/Show5';
 import Show6 from './com/Show6';
 import Show7 from './com/Show7';
-
+import Show8 from './com/Show8';
 import Show9 from './com/Show9';
 import Foot from './com/foot';
+import Cookiecheck from './com/cookiemsg';
 
 function App() {
 
@@ -28,8 +29,10 @@ function App() {
       <Show5 />
       <Show6 />
       <Show7 />
+      <Show8 />
       <Show9 />
       <Foot />
+      <Cookiecheck />
     </div>
   );
 }
