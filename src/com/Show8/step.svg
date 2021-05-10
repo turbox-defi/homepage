@@ -1,0 +1,62 @@
+<svg id="_36" data-name="36" xmlns="http://www.w3.org/2000/svg" width="1200" height="260" viewBox="0 0 1200 260">
+  <defs>
+    <style>
+      .cls-1, .cls-3, .cls-4, .cls-5 {
+        fill: #3cfffc;
+      }
+
+      .cls-1, .cls-2, .cls-3 {
+        fill-rule: evenodd;
+      }
+
+      .cls-1, .cls-4 {
+        opacity: 0.3;
+      }
+
+      .cls-10, .cls-2, .cls-6, .cls-7, .cls-8, .cls-9 {
+        fill: #fff;
+      }
+
+      .cls-10, .cls-2, .cls-6, .cls-9 {
+        opacity: 0.2;
+      }
+
+      .cls-3 {
+        opacity: 0.5;
+      }
+
+      .cls-10, .cls-5, .cls-6, .cls-7, .cls-8, .cls-9 {
+        font-size: 16px;
+        font-family: "Segoe UI Historic";
+      }
+
+      .cls-5, .cls-6, .cls-7 {
+        text-anchor: middle;
+      }
+
+      .cls-10 {
+        text-anchor: end;
+      }
+    </style>
+  </defs>
+  <path id="line_c'o'p_53_cop_22" data-name="line cop 53 cop 22" class="cls-1" d="M25,183h1v36H25V183Zm22,0h1v36H47V183Zm22,0h1v36H69V183Zm22,0h1v36H91V183Zm22,0h1v36h-1V183Zm22,0h1v36h-1V183Zm22,0h1v36h-1V183Zm22,0h1v36h-1V183Zm22,0h1v36h-1V183Zm22,0h1v36h-1V183Zm40,0h1v36h-1V183Zm22,0h1v36h-1V183Zm22,0h1v36h-1V183Zm22,0h1v36h-1V183Zm22,0h1v36h-1V183Zm22,0h1v36h-1V183Zm22,0h1v36h-1V183Zm22,0h1v36h-1V183Zm22,0h1v36h-1V183Zm22,0h1v36h-1V183Z"/>
+  <path id="line_cop_53_cop_25" data-name="line cop 53 cop 25" class="cls-2" d="M501,183h1v36h-1V183Zm22,0h1v36h-1V183Zm22,0h1v36h-1V183Zm22,0h1v36h-1V183Zm22,0h1v36h-1V183Zm22,0h1v36h-1V183Zm22,0h1v36h-1V183Zm22,0h1v36h-1V183Zm22,0h1v36h-1V183Zm22,0h1v36h-1V183Zm40,0h1v36h-1V183Zm22,0h1v36h-1V183Zm22,0h1v36h-1V183Zm22,0h1v36h-1V183Zm22,0h1v36h-1V183Zm22,0h1v36h-1V183Zm22,0h1v36h-1V183Zm22,0h1v36h-1V183Zm22,0h1v36h-1V183Zm22,0h1v36h-1V183Zm40,0h1v36h-1V183Zm22,0h1v36h-1V183Zm22,0h1v36h-1V183Zm22,0h1v36h-1V183Zm22,0h1v36h-1V183Zm22,0h1v36h-1V183Zm22,0h1v36h-1V183Zm22,0h1v36h-1V183Zm22,0h1v36h-1V183Zm22,0h1v36h-1V183Z"/>
+  <path id="b_751_cop_8" data-name="b 751 cop 8" class="cls-3" d="M5.5,135A3.5,3.5,0,1,1,2,138.5,3.5,3.5,0,0,1,5.5,135ZM6,140H5V64H6v76Z"/>
+  <path id="b_751_cop_8_cop" data-name="b 751 cop 8 cop" class="cls-3" d="M243.5,135a3.5,3.5,0,1,1-3.5,3.5A3.5,3.5,0,0,1,243.5,135Zm0.5,5h-1V64h1v76Z"/>
+  <path id="b_751_cop_5" data-name="b 751 cop 5" class="cls-2" d="M480.5,135a3.5,3.5,0,1,1-3.5,3.5A3.5,3.5,0,0,1,480.5,135Zm0.5,5h-1V64h1v76Zm237.5-5a3.5,3.5,0,1,1-3.5,3.5A3.5,3.5,0,0,1,718.5,135Zm0.5,5h-1V64h1v76Zm237.5-5a3.5,3.5,0,1,1-3.5,3.5A3.5,3.5,0,0,1,956.5,135Zm0.5,5h-1V64h1v76Zm237-5a3.5,3.5,0,1,1-3.5,3.5A3.5,3.5,0,0,1,1194,135Zm0.5,5h-1V64h1v76Z"/>
+  <rect id="line_cop_19" data-name="line cop 19" class="cls-4" x="5" y="153" width="1" height="66"/>
+  <rect id="line_cop_19_cop" data-name="line cop 19 cop" class="cls-4" x="243" y="153" width="1" height="66"/>
+  <path id="line_cop_19_cop_2" data-name="line cop 19 cop 2" class="cls-2" d="M481,153h1v66h-1V153Zm237,0h1v66h-1V153Zm238,0h1v66h-1V153Zm238,0h1v66h-1V153Z"/>
+  <text id="_2021_Q2-Q3" data-name="2021 Q2-Q3" class="cls-5" x="254" y="256"><tspan x="254">2021 Q2-Q3</tspan></text>
+  <text id="_2021_Q1" data-name="2021 Q1" class="cls-5" x="32" y="254"><tspan x="32">2021 Q1</tspan></text>
+  <text id="_2021_Q3" data-name="2021 Q3" class="cls-6" x="477" y="256"><tspan x="477">2021 Q3</tspan></text>
+  <text id="_2021_Q3-Q4" data-name="2021 Q3-Q4" class="cls-6" x="722" y="256"><tspan x="722">2021 Q3-Q4</tspan></text>
+  <text id="_2021_Q4_-_2022_Q1" data-name="2021 Q4 - 2022 Q1" class="cls-6" x="954" y="256"><tspan x="954">2021 Q4 - 2022 Q1</tspan></text>
+  <text id="_2022_Q1-Q2" data-name="2022 Q1-Q2" class="cls-6" x="1153" y="256"><tspan x="1153">2022 Q1-Q2</tspan></text>
+  <text id="DEXes_Aggregator" data-name="DEXes Aggregator" class="cls-7" x="67" y="41"><tspan x="67">DEXes Aggregator</tspan></text>
+  <text id="DeFi_Data_Analysis" data-name="DeFi Data Analysis" class="cls-8" x="194" y="41">DeFi Data Analysis</text>
+  <text id="Derivatives:_Yield_Farming_Lending" data-name="Derivatives: Yield Farming/Lending" class="cls-9" x="421" y="15">Derivatives:<tspan x="421" dy="19.2">Yield Farming/Lending</tspan></text>
+  <text id="SpiralX_Asset_Viewer" data-name="SpiralX Asset Viewer" class="cls-9" x="661" y="41">SpiralX Asset Viewer</text>
+  <text id="Portfolio_Builder" data-name="Portfolio Builder" class="cls-9" x="896" y="41">Portfolio Builder</text>
+  <text id="Privacy_Consensus_Trader" data-name="Privacy Consensus Trader" class="cls-10" x="1196" y="15"><tspan x="1196">Privacy Consensus</tspan><tspan x="1196" dy="19.2">Trader</tspan></text>
+</svg>
