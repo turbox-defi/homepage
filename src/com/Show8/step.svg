@@ -1,69 +1,52 @@
-<svg id="361" data-name="36" xmlns="http://www.w3.org/2000/svg" width="1200" height="253" viewBox="0 0 1200 253">
-  <defs>
-    <style>
-      .cls-1, .cls-3, .cls-4, .cls-5 {
-        fill: #3cfffc;
-      }
-
-      .cls-1, .cls-2, .cls-3 {
-        fill-rule: evenodd;
-      }
-
-      .cls-1, .cls-4 {
-        opacity: 0.3;
-      }
-
-      .cls-10, .cls-2, .cls-6, .cls-7, .cls-8, .cls-9 {
-        fill: #fff;
-      }
-
-      .cls-10, .cls-2, .cls-6, .cls-9 {
-        opacity: 0.2;
-      }
-
-      .cls-3 {
-        opacity: 0.5;
-      }
-
-      .cls-10, .cls-5, .cls-6, .cls-7, .cls-8, .cls-9 {
-        font-size: 16px;
-      }
-
-      .cls-5, .cls-6, .cls-7 {
-        text-anchor: middle;
-      }
-
-      .cls-5, .cls-6 {
-        font-family: Alphakind;
-      }
-
-      .cls-10, .cls-7, .cls-8, .cls-9 {
-        font-family: "Myriad Pro";
-      }
-
-      .cls-10 {
-        text-anchor: end;
-      }
-    </style>
-  </defs>
-  <path id="line__53__22" data-name="line  53  22" class="cls-1" d="M23,179h1v36H23V179Zm22,0h1v36H45V179Zm22,0h1v36H67V179Zm22,0h1v36H89V179Zm22,0h1v36h-1V179Zm22,0h1v36h-1V179Zm22,0h1v36h-1V179Zm22,0h1v36h-1V179Zm22,0h1v36h-1V179Zm22,0h1v36h-1V179Zm40,0h1v36h-1V179Zm22,0h1v36h-1V179Zm22,0h1v36h-1V179Zm22,0h1v36h-1V179Zm22,0h1v36h-1V179Zm22,0h1v36h-1V179Zm22,0h1v36h-1V179Zm22,0h1v36h-1V179Zm22,0h1v36h-1V179Zm22,0h1v36h-1V179Z"/>
-  <path id="line__53__25" data-name="line  53  25" class="cls-2" d="M499,179h1v36h-1V179Zm22,0h1v36h-1V179Zm22,0h1v36h-1V179Zm22,0h1v36h-1V179Zm22,0h1v36h-1V179Zm22,0h1v36h-1V179Zm22,0h1v36h-1V179Zm22,0h1v36h-1V179Zm22,0h1v36h-1V179Zm22,0h1v36h-1V179Zm40,0h1v36h-1V179Zm22,0h1v36h-1V179Zm22,0h1v36h-1V179Zm22,0h1v36h-1V179Zm22,0h1v36h-1V179Zm22,0h1v36h-1V179Zm22,0h1v36h-1V179Zm22,0h1v36h-1V179Zm22,0h1v36h-1V179Zm22,0h1v36h-1V179Zm40,0h1v36h-1V179Zm22,0h1v36h-1V179Zm22,0h1v36h-1V179Zm22,0h1v36h-1V179Zm22,0h1v36h-1V179Zm22,0h1v36h-1V179Zm22,0h1v36h-1V179Zm22,0h1v36h-1V179Zm22,0h1v36h-1V179Zm22,0h1v36h-1V179Z"/>
-  <path id="_751__8" data-name=" 751  8" class="cls-3" d="M3.5,131A3.5,3.5,0,1,1,0,134.5,3.5,3.5,0,0,1,3.5,131ZM4,136H3V60H4v76Z"/>
-  <path id="_751__8_" data-name=" 751  8 " class="cls-3" d="M241.5,131a3.5,3.5,0,1,1-3.5,3.5A3.5,3.5,0,0,1,241.5,131Zm0.5,5h-1V60h1v76Z"/>
-  <path id="_751__5" data-name=" 751  5" class="cls-2" d="M478.5,131a3.5,3.5,0,1,1-3.5,3.5A3.5,3.5,0,0,1,478.5,131Zm0.5,5h-1V60h1v76Zm237.5-5a3.5,3.5,0,1,1-3.5,3.5A3.5,3.5,0,0,1,716.5,131Zm0.5,5h-1V60h1v76Zm237.5-5a3.5,3.5,0,1,1-3.5,3.5A3.5,3.5,0,0,1,954.5,131Zm0.5,5h-1V60h1v76Zm237-5a3.5,3.5,0,1,1-3.5,3.5A3.5,3.5,0,0,1,1192,131Zm0.5,5h-1V60h1v76Z"/>
-  <rect id="line__19" data-name="line  19" class="cls-4" x="3" y="149" width="1" height="66"/>
-  <rect id="line__19_" data-name="line  19 " class="cls-4" x="241" y="149" width="1" height="66"/>
-  <path id="line__19__2" data-name="line  19  2" class="cls-2" d="M479,149h1v66h-1V149Zm237,0h1v66h-1V149Zm238,0h1v66h-1V149Zm238,0h1v66h-1V149Z"/>
-  <text id="_2021_Q2-Q3" data-name="2021 Q2-Q3" class="cls-5" x="252" y="252"><tspan x="252">2021 Q2-Q3</tspan></text>
-  <text id="_2021_Q1" data-name="2021 Q1" class="cls-5" x="30" y="250"><tspan x="30">2021 Q1</tspan></text>
-  <text id="_2021_Q3" data-name="2021 Q3" class="cls-6" x="475" y="252"><tspan x="475">2021 Q3</tspan></text>
-  <text id="_2021_Q3-Q4" data-name="2021 Q3-Q4" class="cls-6" x="720" y="252"><tspan x="720">2021 Q3-Q4</tspan></text>
-  <text id="_2021_Q4_-_2022_Q1" data-name="2021 Q4 - 2022 Q1" class="cls-6" x="952" y="252"><tspan x="952">2021 Q4 - 2022 Q1</tspan></text>
-  <text id="_2022_Q1-Q2" data-name="2022 Q1-Q2" class="cls-6" x="1151" y="252"><tspan x="1151">2022 Q1-Q2</tspan></text>
-  <text id="DEXes_Aggregator" data-name="DEXes Aggregator" class="cls-7" x="63" y="37"><tspan x="63">DEXes Aggregator</tspan></text>
-  <text id="DeFi_Data_Analysis" data-name="DeFi Data Analysis" class="cls-8" x="192" y="37">DeFi Data Analysis</text>
-  <text id="Derivatives:_Yield_Farming_Lending" data-name="Derivatives: Yield Farming/Lending" class="cls-9" x="419" y="12">Derivatives:<tspan x="419" dy="19.2">Yield Farming/Lending</tspan></text>
-  <text id="Asset_Viewer" data-name="Asset Viewer" class="cls-9" x="671" y="37">Asset Viewer</text>
-  <text id="Portfolio_Builder" data-name="Portfolio Builder" class="cls-9" x="894" y="37">Portfolio Builder</text>
-  <text id="Privacy_Consensus_Trader" data-name="Privacy Consensus Trader" class="cls-10" x="1196" y="12"><tspan x="1196">Privacy Consensus</tspan><tspan x="1196" dy="19.2">Trader</tspan></text>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="组_36" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 1200 253" style="enable-background:new 0 0 1200 253;" xml:space="preserve">
+<style type="text/css">
+	.st0{opacity:0.3;fill:#3CFFFC;enable-background:new    ;}
+	.st1{opacity:0.2;fill:#FFFFFF;enable-background:new    ;}
+	.st2{opacity:0.5;fill:#3CFFFC;enable-background:new    ;}
+	.st3{fill:#3CFFFC;}
+	.st4{font-family:'Alphakind';}
+	.st5{font-size:16px;}
+	.st6{fill:#FFFFFF;}
+	.st7{font-family:'ArialMT';}
+</style>
+<path id="line_副本_53_拷贝_22" class="st0" d="M23,179h1v36h-1V179z M45,179h1v36h-1V179z M67,179h1v36h-1V179z M89,179h1v36
+	h-1V179z M111,179h1v36h-1V179z M133,179h1v36h-1V179z M155,179h1v36h-1V179z M177,179h1v36h-1V179z M199,179h1v36h-1V179z M221,179
+	h1v36h-1V179z M261,179h1v36h-1V179z M283,179h1v36h-1V179z M305,179h1v36h-1V179z M327,179h1v36h-1V179z M349,179h1v36h-1V179z
+	 M371,179h1v36h-1V179z M393,179h1v36h-1V179z M415,179h1v36h-1V179z M437,179h1v36h-1V179z M459,179h1v36h-1V179z"/>
+<path id="line_副本_53_拷贝_25" class="st1" d="M499,179h1v36h-1V179z M521,179h1v36h-1V179z M543,179h1v36h-1V179z M565,179h1
+	v36h-1V179z M587,179h1v36h-1V179z M609,179h1v36h-1V179z M631,179h1v36h-1V179z M653,179h1v36h-1V179z M675,179h1v36h-1V179z
+	 M697,179h1v36h-1V179z M737,179h1v36h-1V179z M759,179h1v36h-1V179z M781,179h1v36h-1V179z M803,179h1v36h-1V179z M825,179h1v36h-1
+	V179z M847,179h1v36h-1V179z M869,179h1v36h-1V179z M891,179h1v36h-1V179z M913,179h1v36h-1V179z M935,179h1v36h-1V179z M975,179h1
+	v36h-1V179z M997,179h1v36h-1V179z M1019,179h1v36h-1V179z M1041,179h1v36h-1V179z M1063,179h1v36h-1V179z M1085,179h1v36h-1V179z
+	 M1107,179h1v36h-1V179z M1129,179h1v36h-1V179z M1151,179h1v36h-1V179z M1173,179h1v36h-1V179z"/>
+<path id="形状_751_副本_8" class="st2" d="M3.5,131c1.9,0,3.5,1.6,3.5,3.5S5.4,138,3.5,138S0,136.4,0,134.5S1.6,131,3.5,131z
+	 M4,136H3V60h1V136z"/>
+<path id="形状_751_副本_8_拷贝" class="st2" d="M241.5,131c1.9,0,3.5,1.6,3.5,3.5s-1.6,3.5-3.5,3.5s-3.5-1.6-3.5-3.5
+	S239.6,131,241.5,131z M242,136h-1V60h1V136z"/>
+<path id="形状_751_副本_5" class="st1" d="M478.5,131c1.9,0,3.5,1.6,3.5,3.5s-1.6,3.5-3.5,3.5s-3.5-1.6-3.5-3.5
+	S476.6,131,478.5,131z M479,136h-1V60h1V136z M716.5,131c1.9,0,3.5,1.6,3.5,3.5s-1.6,3.5-3.5,3.5s-3.5-1.6-3.5-3.5
+	S714.6,131,716.5,131z M717,136h-1V60h1V136z M954.5,131c1.9,0,3.5,1.6,3.5,3.5s-1.6,3.5-3.5,3.5s-3.5-1.6-3.5-3.5
+	S952.6,131,954.5,131z M955,136h-1V60h1V136z M1192,131c1.9,0,3.5,1.6,3.5,3.5s-1.6,3.5-3.5,3.5s-3.5-1.6-3.5-3.5
+	S1190.1,131,1192,131z M1192.5,136h-1V60h1V136z"/>
+<rect id="line_副本_19" x="3" y="149" class="st0" width="1" height="66"/>
+<rect id="line_副本_19_拷贝" x="241" y="149" class="st0" width="1" height="66"/>
+<path id="line_副本_19_拷贝_2" class="st1" d="M479,149h1v66h-1V149z M716,149h1v66h-1V149z M954,149h1v66h-1V149z M1192,149h1
+	v66h-1V149z"/>
+<text transform="matrix(1 0 0 1 208.7366 252)" class="st3 st4 st5">2021 Q2-Q3</text>
+<text transform="matrix(1 0 0 1 2.4724 250)" class="st3 st4 st5">2021 Q1</text>
+<text transform="matrix(1 0 0 1 445.8004 252)" class="st6 st4 st5">2021 Q3</text>
+<text transform="matrix(1 0 0 1 677.4086 252)" class="st6 st4 st5">2021 Q3-Q4</text>
+<text transform="matrix(1 0 0 1 885.3611 252)" class="st6 st4 st5">2021 Q4 - 2022 Q1</text>
+<text transform="matrix(1 0 0 1 1107.3766 252)" class="st6 st4 st5">2022 Q1-Q2</text>
+<text transform="matrix(1 0 0 1 0.7383 37)" class="st6 st7 st5">DEXes Aggregator</text>
+<text id="DeFi_Data_Analysis" transform="matrix(1 0 0 1 192 37)" class="st6 st7 st5">DeFi Data Analysis</text>
+<text transform="matrix(1 0 0 1 419 12)" class="st1 st7 st5">Derivatives:</text>
+<text transform="matrix(1 0 0 1 419 31.2)" class="st6 st7 st5">Yield Farming/Lending</text>
+<text id="Asset_Viewer" transform="matrix(1 0 0 1 671 37)" class="st1 st7 st5">Asset Viewer</text>
+<text id="Portfolio_Builder" transform="matrix(1 0 0 1 894 37)" class="st1 st7 st5">Portfolio Builder</text>
+<text transform="matrix(1 0 0 1 1059.0547 12)" class="st6 st7 st5">Privacy Consensus</text>
+<text transform="matrix(1 0 0 1 1149.4688 31.2)" class="st6 st7 st5">Trader</text>
 </svg>
