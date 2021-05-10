@@ -14,7 +14,7 @@ export default () => {
     <>
       <div className={styles.box}>
         <div className={styles.content}>
-          <span>© 2020 ALL RIGHTS RESERVED</span>
+          <span>© 2021 ALL RIGHTS RESERVED</span>
           <div className={styles.right}>
             <span>
               Mail:<a href="mailto:support@turbox.io" target="_blank">support@turbox.io</a>
