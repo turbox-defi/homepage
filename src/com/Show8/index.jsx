@@ -5,14 +5,14 @@ export default () => {
 
     return (
         <>
-            <div className={styles.box}>
+            {/* <div className={styles.box}>
                 <h2>
                     Roadmap
                 </h2>
                 <div className={styles.content}>
                     <img src={imgsvg}/>
                 </div>
-            </div>
+            </div> */}
         </>
     )
 }
