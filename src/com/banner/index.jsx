@@ -1,5 +1,5 @@
 import styles from "./style.module.less";
-import imgsrc from "../img/pic.png";
+import svgimg from './banner.svg';
 
 
 const _click = () => {
@@ -18,7 +18,7 @@ export default () => {
           <div className={styles.more} onClick={_click}>
             Learn More
           </div>
-          <img className={styles.imgs} src={imgsrc} alt="img" />
+          <img className={styles.imgs} src={svgimg} alt="img" />
         </div>
       </div>
     </>

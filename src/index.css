@@ -1,13 +1,16 @@
+@font-face {
+    /* font-properties */
+    font-family: Alphakind;
+    src: url('./typeface/Alphakind.woff'), url('./typeface/Alphakind.ttf'), url('./typeface/Alphakind.eot');
+    /* IE9 */
+}
+
 body {
     margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    font-family: Alphakind;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     background-color: cadetblue;
-}
-
-code {
-    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
 
 * {
