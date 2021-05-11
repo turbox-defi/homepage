@@ -1,6 +1,7 @@
 import styles from "./style.module.less";
-import svgimg from './banner.svg';
+import svgimg from "./banner.svg";
 
+import Banner from './Banner';
 
 const _click = () => {
   document
@@ -18,7 +19,7 @@ export default () => {
           <div className={styles.more} onClick={_click}>
             Learn More
           </div>
-          <img className={styles.imgs} src={svgimg} alt="img" />
+          <Banner list={[svgimg]}/>
         </div>
       </div>
     </>

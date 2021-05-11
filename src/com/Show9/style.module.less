@@ -66,6 +66,16 @@
 
 .inputbox {
     display: flex;
+     .kklll{
+            border-color: red !important;
+            position: relative;
+    }
+    .kklll::after{
+        content: 'please enter a valid email address';
+        position: relative;
+        top: 10px;
+        color: red;
+    }
     &>div:nth-child(1) {
         width: 281px;
         height: 49px;
@@ -87,6 +97,8 @@
             font-size: 16px;
             font-family: 'Alphakind';
         }
+
+       
     }
     &>div:nth-child(2) {
         width: 128px;
