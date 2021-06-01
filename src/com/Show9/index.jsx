@@ -9,7 +9,7 @@ import certikLogo from "../img/certik_logo.png";
 
 const _click = () => {
   window.open(
-    "https://bscscan.com/address/0x3960e4fa3c0d79dcc6e33b4fc9f1c1c88ab7b849"
+    "https://bscscan.com/address/0x4555C48f963e50905ad0f1D04087FdD58e083Efb"
   );
 };
 
@@ -73,7 +73,7 @@ export default () => {
             <span>
               Contract:
               <a onClick={_click} className={styles.href}>
-                0x3960e4fa3c0d79dcc6e33b4fc9f1c1c88ab7b849
+              0x4555C48f963e50905ad0f1D04087FdD58e083Efb
               </a>
             </span>
             <img src={certikLogo} alt="logo" />

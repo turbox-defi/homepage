@@ -18,7 +18,7 @@ algorithm
                         <p>
                         Based on modified Dijkstra algorithm can be used to solve the optimal path, the best trading price between tokens will be the max. output value of all paths.
                         </p>
-                        <div className={styles.btn}>
+                        <div className={styles.btn} onClick={()=>{ window.open(`https://exchange.turbox.io`) }}>
                         Go to Exchange
                         </div>
                     </div>

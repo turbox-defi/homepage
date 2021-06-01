@@ -17,6 +17,9 @@ export default () => {
                     <span style={{ color: '#3CFFFC' }}>
                         Home
                     </span>
+                    <span onClick={_click.bind(this,'http://analysis.turbox.io')}>
+                        Analysis
+                    </span>
                     <span onClick={_click.bind(this,'https://exchange.turbox.io')}>
                         Exchange
                     </span>
