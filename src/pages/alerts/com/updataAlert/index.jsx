@@ -21,7 +21,7 @@ export default () => {
 
   const [seleted, setSeleted] = React.useState(list[0].key);
 
-  const [formaValue, setFormValue] = React.useState({});
+  const [formaValue, setFormValue] = React.useState(null);
 
   const [imgs, setImgs] = React.useState([]);
 
@@ -101,12 +101,17 @@ export default () => {
               setSeleted={setSeleted}
               readOnly
             />
-            <Form
-              tabObj={formList}
-              submit={_submit}
-              initValue={formaValue}
-              initImgs={imgs}
-            />
+            {
+              formaValue !== null ? (
+                <Form
+                  tabObj={formList}
+                  submit={_submit}
+                  initValue={formaValue}
+                  initImgs={imgs}
+                />
+              ) : null
+            }
+            
           </div>
         </div>
       </div>

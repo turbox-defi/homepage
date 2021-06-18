@@ -16,15 +16,15 @@ export default ({ tabObj, initValue = {}, submit, initImgs = [] }) => {
 
     const [ formValue, set_formValue ] =  React.useState(initValue);
 
-    const [ imgs, set_imgs ] =  React.useState([]);
+    const [ imgs, set_imgs ] =  React.useState(initImgs);
 
-    React.useEffect(()=>{
-        set_formValue(initValue)
-    },[initValue])
+    // React.useEffect(()=>{
+    //     set_formValue({...initValue})
+    // },[initValue])
 
-    React.useEffect(()=>{
-        set_imgs(initImgs)
-    },[initImgs])
+    // React.useEffect(()=>{
+    //     set_imgs([...initImgs])
+    // },[initImgs])
 
 
     const handleSubmit = () => {
