@@ -4,7 +4,13 @@ export default (type, obj, id) => {
         type: type,
         title: obj.title,
         content: obj.content,
-        images: obj.imgs.map(item=>({ base64: item }))
+        images: obj.imgs.map(item=>{ 
+            if(item.indexOf('data:image') === 0){
+                return {base64: item }
+            }else{
+                return {url: item }
+            }
+        })
     }
 
     if(id){

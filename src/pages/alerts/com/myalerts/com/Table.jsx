@@ -2,7 +2,11 @@ import * as React from "react";
 
 import * as styles from "./compon1.module.less";
 
+import { useHistory } from 'react-router-dom';
+
 import nothingImg from "@/assets/nothing.png";
+
+
 
 const State = ({ state }) => {
   switch (state) {
@@ -16,6 +20,9 @@ const State = ({ state }) => {
 };
 
 export default ({ list = [] }) => {
+
+  let history = useHistory();
+
   return list.length > 0 ? (
     <>
       <table className={styles.tb}>
@@ -42,11 +49,11 @@ export default ({ list = [] }) => {
                 </td>
                 <td className="text-right">
                   {
-                    item.status === 'REJECT' ? <div className={styles.btn}>Edit</div> : null
+                    item.status === 'REJECT' ? <div className={styles.btn} onClick={()=>{history.push(`/alerts/updata/${item.id}`)}} >Edit</div> : null
                   }
 
                   {
-                    item.status === 'APPROVE' ? <div className={styles.btn}>Details</div> : null
+                    item.status === 'APPROVE' ? <div className={styles.btn} onClick={()=>{history.push(`/alerts/detail/${item.id}`)}} >Details</div> : null
                   }
                   
                 </td>

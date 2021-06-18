@@ -4,7 +4,7 @@ import { Form ,InputPicker, FormGroup, FormControl, ControlLabel, HelpBlock, But
 
 import * as styles  from './style.module.less';
 
-export default ({ list, value, setSeleted }) => {
+export default ({ list, value, setSeleted, readOnly = false }) => {
 
   const showlist = list.map(item=>{
     return { label:item.displayName, value:item.key  }
@@ -17,6 +17,7 @@ export default ({ list, value, setSeleted }) => {
             <FormGroup>
               <ControlLabel className={styles.lable}>Type</ControlLabel>
               <FormControl
+                readOnly={readOnly}
                 className={styles.inpuauoto}
                 name="type"
                 accepter={InputPicker}

@@ -51,5 +51,9 @@ export const getUserAlerts = () => {
  * @returns 
  */
  export const getUserAlertDeatil = (id) => {
-    return axios.get(`${BASE_URL}/post/${id}?pageSize=100`)
+    return axios.get(`${BASE_URL}/post/${id}`)
+}
+
+export const putUserAlertDetail = (id, data) => {
+    return axios.put(`${BASE_URL}/post/${id}`,data)
 }

@@ -12,8 +12,11 @@ import formDateChange from '@/utils/formDateChange';
 
 import { postAliert } from '@/http/alerts';
 
+import { useHistory } from "react-router-dom";
+
 export default () => {
 
+  let history = useHistory();
 
   const list = React.useContext(liststore);
 
@@ -47,6 +50,8 @@ export default () => {
   const _submit = (obj) => {
     postAliert(formDateChange(seleted,obj)).then(rp=>{
       Alert.success('successs');
+      history.push('/alerts/myalerts')
+
     }).catch(err=>{
       console.log(err)
       Alert.error("post date err!")

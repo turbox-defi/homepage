@@ -10,7 +10,7 @@ import imgToBase64 from '@/utils/imgBase64';
 
 const MAXIMG = 10;
 
-export default ({ tabObj, initValue = {}, submit }) => {
+export default ({ tabObj, initValue = {}, submit, initImgs = [] }) => {
 
     const formref = React.useRef(null);
 
@@ -18,12 +18,27 @@ export default ({ tabObj, initValue = {}, submit }) => {
 
     const [ imgs, set_imgs ] =  React.useState([]);
 
+    React.useEffect(()=>{
+        set_formValue(initValue)
+    },[initValue])
+
+    React.useEffect(()=>{
+        set_imgs(initImgs)
+    },[initImgs])
+
 
     const handleSubmit = () => {
         if (!formref.current.check()) {
           console.error('Form Error');
           return;
         }
+        let keys = Object.keys(formValue);
+        keys.forEach(key=>{
+            const result = tabObj.filter(item=> item.name === key);
+            if(!result){
+                delete formValue[keys]
+            }
+        })
         submit({...formValue,imgs: imgs})
     }
 

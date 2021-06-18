@@ -54,7 +54,7 @@ const Index = () => {
             <Route path="/alerts/myalerts">
               <Myalerts />
             </Route>
-            <Route path="/alerts/updata">
+            <Route path="/alerts/updata/:id">
               <Updata />
             </Route>
             <Route path="/alerts/login">
