@@ -1,3 +1,6 @@
+/* @import '~rsuite/dist/styles/rsuite-dark.css'; */
+
+@import '~viewerjs/dist/viewer.css';
 @font-face {
     /* font-properties */
     font-family: Alphakind;
@@ -5,12 +8,37 @@
     /* IE9 */
 }
 
+@font-face {
+    font-family: 'iconfont';
+    /* Project id 2520581 */
+    src: url('//at.alicdn.com/t/font_2520581_8onewd6h844.woff2?t=1623396206632') format('woff2'), url('//at.alicdn.com/t/font_2520581_8onewd6h844.woff?t=1623396206632') format('woff'), url('//at.alicdn.com/t/font_2520581_8onewd6h844.ttf?t=1623396206632') format('truetype'), url('//at.alicdn.com/t/font_2520581_8onewd6h844.svg?t=1623396206632#iconfont') format('svg');
+}
+
+.iconfont {
+    font-family: "iconfont" !important;
+    font-size: inherit;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
 body {
     margin: 0;
+    font-size: 14px;
     font-family: Alphakind;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     background-color: cadetblue;
+}
+
+html {
+    font-size: 120px;
+}
+
+@media screen and (max-width:1200px) {
+    html {
+        font-size: 10vw;
+    }
 }
 
 * {
@@ -90,13 +118,12 @@ video {
     padding: 0;
     border: 0;
     outline: 0;
-    font-size: 100%;
     vertical-align: baseline;
     background: transparent;
 }
 
 body {
-    line-height: 1;
+    line-height: 1.3;
 }
 
 article,
@@ -187,4 +214,49 @@ hr {
 input,
 select {
     vertical-align: middle;
+}
+
+.autobtn {
+    min-width: 1.4rem;
+    min-height: 0.5rem;
+    background-color: #0260FF;
+    color: #ffffff;
+    border-radius: 5px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 0.15rem;
+    padding: 0.2rem;
+}
+
+.autobtn:hover {
+    opacity: 0.7;
+}
+
+.card {
+    background: #151C30;
+    padding: 0.208rem;
+    border-radius: 5px;
+    width: 100%;
+}
+
+ul {
+    list-style: none;
+}
+
+#zmageControlRotateLeft,
+#zmageControlRotateRight,
+#zmageControlZoom,
+#zmageControlClose {
+    width: 48px !important;
+    height: 48px !important;
+}
+
+#zmageControlRotateLeft>svg,
+#zmageControlRotateRight>svg,
+#zmageControlZoom>svg,
+#zmageControlClose>svg {
+    width: 48px !important;
+    height: 48px !important;
 }

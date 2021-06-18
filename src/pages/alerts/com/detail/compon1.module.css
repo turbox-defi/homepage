@@ -1,0 +1,143 @@
+.box {
+    width: 100%;
+    padding-bottom: 0.6rem;
+    font-family: Arial, sans-serif;
+}
+
+.content {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.nothing {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.nothing>span {
+    font-size: 0.3rem;
+    margin-top: 0.14rem;
+    color: #ffffff;
+}
+
+.back {
+    font-size: 0.1333rem;
+    color: #8F92AA;
+    cursor: pointer;
+    padding: 0.358333rem 0 0.2rem 0;
+}
+
+.back>span {
+    margin-right: 0.05rem;
+}
+
+.li {
+    border-bottom: 1px solid #272D40;
+    padding-bottom: 0.15rem;
+    padding-top: 0.14rem;
+}
+
+.li h4 {
+    font-size: 0.13rem;
+    padding-bottom: 0.1rem;
+    line-height: 1.4;
+    font-weight: 400;
+}
+
+.list {
+    display: flex;
+    color: #8F92AA;
+    font-size: 0.1222rem;
+    align-items: center;
+}
+
+.list>span {
+    margin-right: 0.5rem;
+}
+
+.list>span>span {
+    margin-right: 0.07rem;
+}
+
+.tb {
+    width: 100%;
+    font-size: 0.12rem;
+    margin-top: 0.3333rem;
+}
+
+.tb th {
+    color: #FFFFFF;
+    width: 1.3rem;
+    text-align: left;
+    padding: 0.0833rem 0;
+    vertical-align: top;
+}
+
+.tb td {
+    color: #8F92AA;
+    padding: 0.0833rem 0;
+    line-height: 1.6;
+}
+
+.imgs {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: -0.125rem;
+    margin-right: -0.125rem;
+}
+
+.imgs>img {
+    margin: 0.125rem 0.125rem 0 0;
+    width: 1.83rem;
+    height: 1.83rem;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.btns {
+    display: flex;
+    margin-top: 0.25rem;
+}
+
+.btns>div {
+    width: 1.16666rem;
+    height: 0.352rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #0260FF;
+    color: #ffffff;
+    font-size: 0.133333rem;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.btns>div:first-child {
+    margin-right: 0.2rem;
+}
+
+.btns>div>span {
+    margin-right: 0.04rem;
+}
+
+@media screen and (min-width:1200px) {
+    .content {
+        width: 1200px;
+    }
+}
+
+@media screen and (max-width:560px) {
+    .imgs>img {
+        margin: 0.125rem 0.125rem 0 0;
+        width: 100%;
+        height: inherit;
+        object-fit: cover;
+    }
+    .btns>div {
+        width: 2.16666rem;
+        height: 0.82rem;
+    }
+}

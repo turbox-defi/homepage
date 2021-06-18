@@ -4,6 +4,8 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 
+import 'url-search-params-polyfill';
+
 
 
 ReactDOM.render(

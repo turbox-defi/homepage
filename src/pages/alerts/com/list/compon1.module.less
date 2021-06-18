@@ -1,0 +1,62 @@
+.box {
+    width: 100%;
+}
+
+.content {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.msg {
+    color: #FFFFFF;
+    font-size: 0.344rem;
+    width: 54%;
+    padding-right: .3rem;
+}
+
+.msg>p {
+    margin-top: 0.33rem;
+    margin-bottom: 0.3rem;
+    font-size: 0.15rem;
+    line-height: 1.4;
+    color: #FFFFFF;
+}
+
+
+.msg>h1 {
+    font-weight: bold;
+    margin-top: 0.1rem;
+    color: #3CFFFC;
+    font-size: 0.4rem;
+}
+
+.img {
+    width: 46%;
+}
+
+.img>img {
+    width: 100%;
+}
+
+@media screen and (min-width:1200px) {
+    .content {
+        width: 1200px;
+    }
+}
+
+@media screen and (max-width:560px) {
+    .content {
+        flex-direction: column;
+    }
+    .msg,
+    .img {
+        width: 100%;
+    }
+    .msg {
+        text-align: center;
+        padding-right: 0
+    }
+}

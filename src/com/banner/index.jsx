@@ -1,5 +1,6 @@
 import styles from "./style.module.less";
 import svgimg from "./banner.svg";
+import svg2img from "./banner2.svg";
 
 import Banner from './Banner';
 
@@ -19,7 +20,7 @@ export default () => {
           <div className={styles.more} onClick={_click}>
             Learn More
           </div>
-          <Banner list={[svgimg]}/>
+          <Banner list={[svgimg,svg2img]}/>
         </div>
       </div>
     </>

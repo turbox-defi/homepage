@@ -1,0 +1,152 @@
+.box {
+    width: 100%;
+    padding: 1.2rem 0;
+    font-family:  Arial,  sans-serif;
+}
+
+.content {
+    width: 90%;
+    margin: 0 auto;
+}
+
+@media screen and (min-width:1200px) {
+    .content {
+        width: 1200px;
+    }
+}
+
+.search{
+    min-width: 400px;
+    width: 45%;
+    height: 50px;
+    margin: 0 auto 50px auto;
+
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+
+    &>div:nth-child(1){
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        flex: 1;
+        border: 1px solid #8F92AA;
+        background: #000000;
+        border-right: 0px;
+        border-top-left-radius: 50px;
+        border-bottom-left-radius: 50px;
+        overflow: hidden;
+        &>input{
+            width: 100%;
+            background-color: transparent;
+            border: 0;
+            margin: 0;
+            padding-left: 25px;
+            outline: none;
+            color: #ffffff;
+        }
+    }
+    &>div:nth-child(2){
+        background-color: #0260FF;
+        border-top-right-radius: 50px;
+        border-bottom-right-radius: 50px;
+        width: 66px;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #ffffff;
+        font-size: 30px;
+        cursor: pointer;
+        &:hover{
+            opacity: 0.8;
+        }
+    }
+}
+
+.listbox {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.listbox>div {
+    width: 10%;
+    color: #8F92AA;
+    font-size: 0.13333rem;
+    cursor: pointer;
+    padding: 0.1rem 0;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    /* margin-right: 2.6%; */
+}
+
+@media screen and (max-width:1000px) {
+    .listbox>div {
+        width: 24%;
+        margin-top: 0.12rem;
+    }
+}
+
+.listbox>div:last-child {
+    margin-right: 0;
+}
+
+.listbox>div>span {
+    margin-bottom: 0.05rem;
+}
+
+.listseleted,
+.listbox>div:hover {
+    background: #0260FF;
+    color: #ffffff !important;
+}
+
+.li {
+    border-bottom: 1px solid #272D40;
+    padding-bottom: 0.15rem;
+    padding-top: 0.14rem;
+    cursor: pointer;
+}
+
+.li h4 {
+    color: #FFFFFF;
+    font-size: 0.13rem;
+    padding-bottom: 0.1rem;
+    line-height: 1.4;
+    font-weight: 400;
+}
+
+.list {
+    display: flex;
+    color: #8F92AA;
+    font-size: 0.1222rem;
+    align-items: center;
+}
+
+.list>span {
+    margin-right: 0.5rem;
+}
+
+.list>span>span {
+    margin-right: 0.07rem;
+}
+
+.card {
+    margin-top: 0.333rem;
+}
+
+.cartbox {
+    display: flex;
+}
+
+.cartbox>ul {
+    flex: 1;
+}

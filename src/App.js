@@ -1,17 +1,24 @@
-import Head from './com/head';
-import Banner from './com/banner';
-import WeDo from './com/WeDo';
-import Show1 from './com/Show1';
-import Show2 from './com/Show2';
-import Show3 from './com/Show3';
-import Show4 from './com/Show4';
-import Show5 from './com/Show5';
-import Show6 from './com/Show6';
-import Show7 from './com/Show7';
-import Show8 from './com/Show8';
-import Show9 from './com/Show9';
-import Foot from './com/foot';
-import Cookiecheck from './com/cookiemsg';
+import React, {Suspense, lazy} from "react";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
+
+import PageLoading from '@components/PageLoading';
+
+import Head from '@/com/head';
+import Foot from '@/com/foot';
+import Cookiecheck from '@/com/cookiemsg';
+
+import HomePage from '@/pages/home'
+
+import 'rsuite/lib/styles/themes/dark/index.less';
+
+import './App.less';
+
+const DynamicComponent = lazy (() => import(`@pages/alerts`));
 
 function App() {
 
@@ -19,20 +26,21 @@ function App() {
 
   return (
     <div className="App">
-      <Head />
-      <Banner />
-      <WeDo />
-      <Show1 />
-      <Show2 />
-      <Show3 />
-      <Show4 />
-      <Show5 />
-      <Show6 />
-      <Show7 />
-      <Show8 />
-      <Show9 />
-      <Foot />
-      <Cookiecheck />
+      <Router>
+        <Head />
+        <Switch>
+          <Route path="/alerts">
+            <Suspense fallback={<PageLoading />}>
+                  <DynamicComponent />
+            </Suspense> 
+          </Route>
+          <Route path="/">
+            <HomePage />
+          </Route>
+        </Switch>
+        <Foot />
+        <Cookiecheck />
+      </Router>
     </div>
   );
 }
