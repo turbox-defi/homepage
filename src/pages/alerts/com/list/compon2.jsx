@@ -6,6 +6,8 @@ import classnames from "classnames";
 
 import { useHistory } from "react-router-dom";
 
+import TimeAgo from 'react-timeago';
+
 import { types } from "@/utils/types";
 
 import * as styles from "./compon2.module.less";
@@ -76,7 +78,7 @@ export default () => {
     querydata$.current.next({
       pageIndex: state.pageIndex,
       type: state.type,
-      query: state.queryKey,
+      keywords: state.queryKey,
     });
   }, [state.pageIndex, state.type, state.queryKey]);
 
@@ -159,7 +161,11 @@ export default () => {
                             <span className="iconfont">&#xe612;</span>
                             {item.accountMask}
                           </span>
-                          <span> {item.approveTime}</span>
+                          {/* <span> {item.approveTime}</span> */}
+                          <span>
+<TimeAgo
+  date={item.approveTime} 
+  local='zh_CN' /></span>
                         </div>
                       </li>
                     );

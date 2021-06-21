@@ -10,6 +10,8 @@ import Add from "./com/add";
 import Myalerts from "./com/myalerts";
 import Login from "./com/login";
 import Singup from "./com/singup";
+import Resetpwd from "./com/resetpwd";
+import InputResetpwd from "./com/resetpwdinput";
 import Singupsuccess from "./com/singupsuccess";
 import LinkRrr from "./com/linkerr";
 
@@ -60,8 +62,14 @@ const Index = () => {
             <Route path="/alerts/login">
               <Login />
             </Route>
-            <Route path="/alerts/singup">
+            <Route path="/alerts/signup">
               <Singup />
+            </Route>
+            <Route path="/alerts/reset_pwd_account">
+              <Resetpwd />
+            </Route>
+            <Route path="/alerts/reset_password">
+              <InputResetpwd />
             </Route>
             <Route path="/alerts/verify_success">
               <Singupsuccess />

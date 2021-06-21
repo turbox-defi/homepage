@@ -7,6 +7,16 @@ import PostEmail from "./postemail";
 export default () => {
   const [type, set_type] = React.useState(null);
 
+  React.useEffect(()=>{
+
+    var search = new URLSearchParams(window.location.search);
+
+    let email = search.get('email');
+    if(email){
+      set_type(email)
+    }
+  },[])
+
   return (
     <>
       <div className={styles.box}>

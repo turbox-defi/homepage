@@ -49,7 +49,15 @@ export default () => {
       window.location.href = '/alerts';
     }).catch(err=>{
       set_loading(false);
-      Alert.error("account or password not match")
+      if(err.data.code === 'AUTHORIZE_ACCOUNT_AND_PASSWORD_NOT_MATCH'){
+        Alert.error("account or password not match")
+      }
+      if(err.data.code === 'AUTHORIZE_ACCOUNT_NOT_VERIFIED'){
+        Alert.error("account not verified");
+        window.location.href = `/alerts/signup?email=${formValue.account}`
+      }
+      
+      
     })
   };
 
@@ -92,7 +100,7 @@ export default () => {
         </Form>
       </div>
       <div className={styles.forgot}>
-        <span>Forgot password？</span>
+        <span onClick={()=>{window.location.href = '/alerts/reset_pwd_account';}}>Forgot password？</span>
       </div>
 
       <Button appearance="primary" block onClick={_submit}>
@@ -100,7 +108,7 @@ export default () => {
       </Button>
       <div className={styles.tosign}>
         <span>Don't have an account?</span>
-        <a href="/alerts/singup">Sign up now</a>
+        <a href="/alerts/signup">Sign up now</a>
       </div>
     </>
   );

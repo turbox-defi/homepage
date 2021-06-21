@@ -1,21 +1,36 @@
 import React from "react";
-import { Placeholder, Loader } from "rsuite";
+import { Placeholder, Loader, Button } from "rsuite";
 import * as styles from "./compon1.module.css";
 
 import { useHistory } from "react-router-dom";
+
+import TimeAgo from "react-timeago";
 
 import ShowImg from "@/components/openimg";
 
 import nodata from "@/assets/nothing.png";
 
 import { types, getparamsShowLable } from "@/utils/types";
-import store from '../../contentstore';
+import store from "../../contentstore";
+
+import Authority from "@/components/Authority";
+import { alertClickGood } from '@/http/alerts';
 
 const { Paragraph } = Placeholder;
 
-const Content = ({ data }) => {
 
+const Content = ({ data }) => {
   let tableList = React.useContext(store);
+
+  const [ good, set_good_up ] = React.useState(0)
+
+  const _click = () => {
+    if(good == 0){
+      set_good_up(1)
+      alertClickGood(data.id);
+    }
+  }
+
 
   return (
     <>
@@ -30,7 +45,7 @@ const Content = ({ data }) => {
             <span className="iconfont">&#xe612;</span>
             {data.account}
           </span>
-          <span>this ndeed todo</span>
+          <span>{<TimeAgo date={data.approveTime} local="zh_CN" />}</span>
         </div>
       </div>
 
@@ -72,12 +87,14 @@ const Content = ({ data }) => {
           <tr>
             <td></td>
             <td>
-              <div className={styles.btns}>
-                <div>
-                  <span className="iconfont">&#xe9a3;</span>
-                  Agree 3
-                </div>
-              </div>
+              {/* <div className={styles.btns}> */}
+                <Authority>
+                  <Button appearance="primary" onClick={_click} disabled={good === 1 || data.agreed}>
+                    <span className="iconfont" style={{ marginRight: '8px' }}>&#xe9a3;</span>
+                    Agree {data.agree + good}
+                  </Button>
+                </Authority>
+              {/* </div> */}
             </td>
           </tr>
         </tbody>
@@ -105,15 +122,18 @@ const Loading = () => {
 };
 
 export default ({ data }) => {
-
   let history = useHistory();
-
 
   return (
     <>
       <div className={styles.box}>
         <div className={styles.content}>
-          <div className={styles.back} onClick={()=>{ history.push('/alerts') }}>
+          <div
+            className={styles.back}
+            onClick={() => {
+              history.push("/alerts");
+            }}
+          >
             <span className="iconfont">&#xe860;</span>
             TurboAlerts
           </div>

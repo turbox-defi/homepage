@@ -6,7 +6,7 @@ import Table from './Table';
 
 import userimg from './user.png';
 
-export default ({ list }) => {
+export default ({ list, setPage, pagination }) => {
 
     return (
         <>
@@ -14,9 +14,6 @@ export default ({ list }) => {
                 <div>
                     <img src={userimg} />
                 </div>
-                <h1>
-                407014589@gmal.com
-                </h1>
             </div>
             <div className={styles.box}>
                 <div className={styles.content}>
@@ -25,7 +22,7 @@ export default ({ list }) => {
                             Record
                         </h1>
                         
-                        <Table list={list}/>
+                        <Table list={list} setPage={setPage} pagination={pagination}/>
                         
                     </div>
                 </div>

@@ -4,6 +4,8 @@ import * as styles from "./compon1.module.less";
 
 import { useHistory } from 'react-router-dom';
 
+import { Pagination } from "rsuite";
+
 import nothingImg from "@/assets/nothing.png";
 
 
@@ -19,7 +21,7 @@ const State = ({ state }) => {
   }
 };
 
-export default ({ list = [] }) => {
+export default ({ list = [], setPage, pagination }) => {
 
   let history = useHistory();
 
@@ -63,6 +65,20 @@ export default ({ list = [] }) => {
 
         </tbody>
       </table>
+      <div style={{ textAlign: "center", marginTop: "0.5rem" }}>
+                <Pagination
+                  prev
+                  next
+                  first
+                  last
+                  ellipsis
+                  boundaryLinks
+                  activePage={pagination.pageIndex}
+                  pages={pagination.totalPage}
+                  maxButtons={5}
+                  onSelect={setPage}
+                />
+      </div>
     </>
   ) : (
     <div className={styles.nodate}>
