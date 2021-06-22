@@ -1,12 +1,12 @@
 import * as React from "react";
 
-import { Pagination } from "rsuite";
+import { Pagination, Loader } from "rsuite";
 
 import classnames from "classnames";
 
 import { useHistory } from "react-router-dom";
 
-import TimeAgo from 'react-timeago';
+import TimeAgo from "react-timeago";
 
 import { types } from "@/utils/types";
 
@@ -17,7 +17,9 @@ import { switchMap } from "rxjs/operators";
 
 import { getAlertsList } from "@/http/alerts";
 
-const initiaState = {
+import NoThingImg from '@/assets/nothing.png';
+
+let initiaState = {
   list: [],
   pageIndex: 1,
   pagination: {
@@ -40,12 +42,13 @@ const resucer = (state, action) => {
 };
 
 export default () => {
-
   let history = useHistory();
 
   const [state, dispatch] = React.useReducer(resucer, initiaState);
 
   const [query, setQuery] = React.useState("");
+
+  const [loading, setLoading] = React.useState(false);
 
   const querydata$ = React.useRef(new Subject());
 
@@ -62,6 +65,8 @@ export default () => {
           pagination: value.pagination,
           list: value.paginationData,
         });
+
+        setLoading(false);
       },
       error: (err) => {
         console.log(err);
@@ -74,7 +79,7 @@ export default () => {
   }, []);
 
   React.useEffect(() => {
-    // getdate
+    setLoading(true);
     querydata$.current.next({
       pageIndex: state.pageIndex,
       type: state.type,
@@ -84,6 +89,9 @@ export default () => {
 
   const _inputChange = (e) => {
     setQuery(e.target.value);
+    if(e.target.value.length == 0){
+      setObjToHttp({ queryKey: e.target.value, pageIndex: 1 });
+    }
   };
 
   const setObjToHttp = (value) => {
@@ -128,7 +136,7 @@ export default () => {
                   })}
                   key={index}
                   onClick={() => {
-                    setObjToHttp({ type: key, pageIndex: 1 });
+                    setObjToHttp({ type: key, queryKey: query, pageIndex: 1 });
                   }}
                 >
                   {item.icon}
@@ -141,21 +149,22 @@ export default () => {
           <div className={styles.card}>
             <div className="card">
               <div className={styles.cartbox}>
+                {loading ? <Loader backdrop content="loading..." size="md"  vertical style={{zIndex: '1000'}}/> : null}
                 <ul>
                   {state.list.map((item, index) => {
                     return (
                       <li className={styles.li} key={index}>
-                        <h4 onClick={()=>{history.push(`/alerts/detail/${item.id}`)}}>
+                        <h4
+                          onClick={() => {
+                            window.open(`/alerts/detail/${item.id}`)
+                          }}
+                        >
                           {item.title}
                         </h4>
                         <div className={styles.list}>
                           <span>
-                            {
-                              types[item.type].icon
-                            }
-                            {
-                              types[item.type].name
-                            }
+                            {types[item.type].icon}
+                            {types[item.type].name}
                           </span>
                           <span>
                             <span className="iconfont">&#xe612;</span>
@@ -163,13 +172,19 @@ export default () => {
                           </span>
                           {/* <span> {item.approveTime}</span> */}
                           <span>
-<TimeAgo
-  date={item.approveTime} 
-  local='zh_CN' /></span>
+                            <TimeAgo date={item.approveTime} local="zh_CN" />
+                          </span>
                         </div>
                       </li>
                     );
                   })}
+                  {
+                    state.list.length == 0 ? (
+                      <div style={{ textAlign: 'center' }}>
+                        <img src={NoThingImg} />
+                      </div>
+                    ) : null
+                  }
                 </ul>
               </div>
 

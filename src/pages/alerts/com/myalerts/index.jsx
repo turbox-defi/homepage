@@ -30,7 +30,6 @@ export default () => {
           pagination: rp.pagination,
           loading: false,
         });
-        console.log(rp);
       })
       .catch((err) => {
         set_state((old) => ({ list: [], loading: false }));
@@ -46,7 +45,7 @@ export default () => {
     <>
       {state.loading ? (
         <div style={{ width: "70%", margin: "0 auto" }}>
-          <Paragraph style={{ marginTop: 30 }} rows={10} graph="circle">
+          <Paragraph style={{ marginTop: 30 }} rows={10} >
             <Loader center content="loading" />
           </Paragraph>
         </div>

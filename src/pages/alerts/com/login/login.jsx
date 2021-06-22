@@ -4,7 +4,7 @@ import * as styles from "./style.module.less";
 import { login } from '@/http/login';
 
 import Cookies from 'js-cookie'
-import { TOKENID, domanUrl } from '@/config';
+import { TOKENID, domanUrl, pwd_reg } from '@/config';
 
 import {
   Form,
@@ -24,11 +24,14 @@ import {
 const { StringType, NumberType } = Schema.Types;
 
 const checkForm = Schema.Model({
-  account: StringType().isEmail("Please enter the correct email").isRequired("This password is required"),
+  account: StringType().isEmail("Please enter a valid email address.").isRequired("Please enter email address"),
   password: StringType()
-    .minLength(8, "The password cannot be less than 8 characters")
-    .maxLength(16, "The password cannot be greater than 16 characters")
-    .isRequired("This password is required"),
+    .minLength(8, "Use 8 characters or more for your password.")
+    .maxLength(16, "Use 16 characters or less for your password.")
+    .addRule((value, data) => {
+      return pwd_reg.test(value) ;
+    }, 'Use 8 or more characters with a mix of letters and numbers.')
+    .isRequired("Please enter the password"),
 });
 
 export default () => {
@@ -50,10 +53,10 @@ export default () => {
     }).catch(err=>{
       set_loading(false);
       if(err.data.code === 'AUTHORIZE_ACCOUNT_AND_PASSWORD_NOT_MATCH'){
-        Alert.error("account or password not match")
+        Alert.error("Invalid username or password.")
       }
       if(err.data.code === 'AUTHORIZE_ACCOUNT_NOT_VERIFIED'){
-        Alert.error("account not verified");
+        Alert.error("The account is not activated.");
         window.location.href = `/alerts/signup?email=${formValue.account}`
       }
       
@@ -81,7 +84,7 @@ export default () => {
               <FormControl
                 name="account"
                 type="email"
-                placeholder="Please input email address"
+                placeholder="Please enter email address"
               />
             </InputGroup>
           </FormGroup>
@@ -93,7 +96,7 @@ export default () => {
               <FormControl
                 name="password"
                 type="password"
-                placeholder="Please input the password"
+                placeholder="Please enter the password"
               />
             </InputGroup>
           </FormGroup>

@@ -1,6 +1,7 @@
 import * as React from "react";
 import * as styles from "./style.module.less";
 import { reset_pwd_input } from "@/http/login";
+import { pwd_reg } from '@/config'
 
 import {
   Form,
@@ -23,17 +24,20 @@ const { StringType, NumberType } = Schema.Types;
 
 const checkForm = Schema.Model({
   password: StringType()
-    .minLength(8, "The password cannot be less than 8 characters")
-    .maxLength(16, "The password cannot be greater than 16 characters")
-    .isRequired("This password is required"),
+    .minLength(8, "Use 8 characters or more for your password.")
+    .maxLength(16, "Use 16 characters or less for your password.")
+    .addRule((value, data) => {
+      return pwd_reg.test(value) ;
+    }, 'Use 8 or more characters with a mix of letters and numbers.')
+    .isRequired("Please enter the password"),
   repeatPassword: StringType()
     .addRule((value, data) => {
       if (value !== data.password) {
         return false;
       }
       return true;
-    }, "The two passwords do not match")
-    .isRequired("This field is required."),
+    }, 'Those passwords didn’t match. Please Try again.')
+    .isRequired('Please enter the password')
 });
 
 
@@ -114,7 +118,7 @@ export default () => {
                   <FormControl
                     name="password"
                     type="password"
-                    placeholder="Please reset your password"
+                    placeholder="Please enter the password"
                   />
                 </InputGroup>
               </FormGroup>
@@ -126,7 +130,7 @@ export default () => {
                   <FormControl
                     name="repeatPassword"
                     type="password"
-                    placeholder="Please confirm your password"
+                    placeholder="Please enter the password"
                   />
                 </InputGroup>
               </FormGroup>

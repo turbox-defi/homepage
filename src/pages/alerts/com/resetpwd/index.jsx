@@ -72,8 +72,8 @@ export default () => {
               formValue={formValue}
               model={Schema.Model({
                 account: StringType()
-                  .isEmail("Please enter the correct email")
-                  .isRequired("This email is required"),
+                  .isEmail("Please enter a valid email address.")
+                  .isRequired("Please enter email address"),
               })}
             >
               <FormGroup>
@@ -84,7 +84,7 @@ export default () => {
                   <FormControl
                     name="account"
                     type="email"
-                    placeholder="Please input email address"
+                    placeholder="Please enter email address"
                   />
                 </InputGroup>
               </FormGroup>

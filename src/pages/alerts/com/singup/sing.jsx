@@ -6,7 +6,7 @@ import { accountsing, checkLoginEmail } from '@/http/login';
 import { Subject } from 'rxjs';
 import { debounceTime, switchMap } from 'rxjs/operators';
 
-import { email_reg } from '@/config';
+import { email_reg, pwd_reg } from '@/config';
 
 import {
   Form,
@@ -37,19 +37,22 @@ const ovsb$ = queryCheckEmail$.pipe(
 
 
 const checkForm = Schema.Model({
-  account: StringType().isEmail("Please enter the correct email").isRequired("This email is required"),
+  account: StringType().isEmail("Please enter a valid email address.").isRequired("Please enter email address"),
   password: StringType()
-    .minLength(8, "The password cannot be less than 8 characters")
-    .maxLength(16, "The password cannot be greater than 16 characters")
-    .isRequired("This password is required"),
+    .minLength(8, "Use 8 characters or more for your password.")
+    .maxLength(16, "Use 16 characters or less for your password.")
+    .addRule((value, data) => {
+      return pwd_reg.test(value) ;
+    }, 'Use 8 or more characters with a mix of letters and numbers.')
+    .isRequired("Please enter the password"),
   repeatPassword: StringType()
     .addRule((value, data) => {
       if (value !== data.password) {
         return false;
       }
       return true;
-    }, 'The two passwords do not match')
-    .isRequired('This field is required.')
+    }, 'Those passwords didn’t match. Please Try again.')
+    .isRequired('Please enter the password')
 });
 
 export default ({ setemail }) => {
@@ -124,15 +127,15 @@ export default ({ setemail }) => {
               <FormControl
                 name="account"
                 type="email"
-                placeholder="Please input email address"
+                placeholder="Please enter email address"
                 onChange={account_change_check}
               />
             </InputGroup>
             <ErrorMessage show={emailcheck === 'no'} >
-              <span style={{ color: 'red' }}><Icon icon="info" /> email unavailable </span>
+              <span style={{ color: 'red' }}><Icon icon="info" /> That Email is taken. Please Try another. </span>
             </ErrorMessage>
             <ErrorMessage show={emailcheck === 'yes'} >
-              <span style={{ color: 'rgb(60, 255, 252)' }}><Icon icon="check-square" /> email available </span>
+              <span style={{ color: 'rgb(60, 255, 252)' }}><Icon icon="check-square" /> That Email is available. </span>
             </ErrorMessage>
           </FormGroup>
           <FormGroup>
@@ -143,7 +146,7 @@ export default ({ setemail }) => {
               <FormControl
                 name="password"
                 type="password"
-                placeholder="Please input the password"
+                placeholder="Please enter the password"
               />
             </InputGroup>
           </FormGroup>
@@ -155,7 +158,7 @@ export default ({ setemail }) => {
               <FormControl
                 name="repeatPassword"
                 type="password"
-                placeholder="Please confirm your password"
+                placeholder="Please enter the password"
               />
             </InputGroup>
           </FormGroup>

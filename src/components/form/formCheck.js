@@ -7,7 +7,7 @@ const checkItem = (checkObj) => {
     let resultObj = {};
     checkObj.forEach(item=>{
         if(item.required){
-            resultObj[item.name] = StringType().isRequired('isRequired');
+            resultObj[item.name] = StringType().isRequired('Required');
         }
     });
 

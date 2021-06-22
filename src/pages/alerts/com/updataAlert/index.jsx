@@ -23,6 +23,8 @@ export default () => {
 
   const [formaValue, setFormValue] = React.useState(null);
 
+  const [ loading, setLoading ] = React.useState(false);
+
   const [imgs, setImgs] = React.useState([]);
 
   const formList = React.useMemo(() => {
@@ -78,6 +80,7 @@ export default () => {
   const _submit = (obj) => {
     let result = formDateChange(seleted, obj);
     result.accountId = id;
+    setLoading(true);
     putUserAlertDetail(id,result)
       .then((rp) => {
         Alert.success("successs");
@@ -85,6 +88,7 @@ export default () => {
       })
       .catch((err) => {
         console.log(err);
+        setLoading(false);
         Alert.error("post date err!");
       });
   };
@@ -108,6 +112,7 @@ export default () => {
                   submit={_submit}
                   initValue={formaValue}
                   initImgs={imgs}
+                  loading={loading}
                 />
               ) : null
             }

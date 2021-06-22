@@ -55,7 +55,7 @@ export default ({ list = [], setPage, pagination }) => {
                   }
 
                   {
-                    item.status === 'APPROVE' ? <div className={styles.btn} onClick={()=>{history.push(`/alerts/detail/${item.id}`)}} >Details</div> : null
+                    item.status === 'APPROVE' ? <div className={styles.btn} onClick={()=>{window.open(`/alerts/detail/${item.id}`)}} >Details</div> : null
                   }
                   
                 </td>

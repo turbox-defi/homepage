@@ -22,6 +22,8 @@ export default () => {
 
   const [seleted, setSeleted] = React.useState(list[0].key)
 
+  const [ loading, setLoading ] = React.useState(false);
+
   const formList = React.useMemo(()=>{
     const result = list.filter(item=>item.key === seleted);
     if(result[0]){
@@ -48,13 +50,16 @@ export default () => {
   },[seleted]);
 
   const _submit = (obj) => {
+    setLoading(true);
     postAliert(formDateChange(seleted,obj)).then(rp=>{
+      setLoading(false);
       Alert.success('successs');
       history.push('/alerts/myalerts')
 
     }).catch(err=>{
       console.log(err)
-      Alert.error("post date err!")
+      setLoading(false);
+      Alert.error("post data err!")
     })
   }
 
@@ -72,6 +77,7 @@ export default () => {
             <Form
               tabObj={formList}
               submit={_submit}
+              loading={loading}
             />
           </div>
         </div>

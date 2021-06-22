@@ -10,7 +10,7 @@ import imgToBase64 from '@/utils/imgBase64';
 
 const MAXIMG = 10;
 
-export default ({ tabObj, initValue = {}, submit, initImgs = [] }) => {
+export default ({ tabObj, initValue = {}, submit, initImgs = [], loading = false }) => {
 
     const formref = React.useRef(null);
 
@@ -18,13 +18,9 @@ export default ({ tabObj, initValue = {}, submit, initImgs = [] }) => {
 
     const [ imgs, set_imgs ] =  React.useState(initImgs);
 
-    // React.useEffect(()=>{
-    //     set_formValue({...initValue})
-    // },[initValue])
-
-    // React.useEffect(()=>{
-    //     set_imgs([...initImgs])
-    // },[initImgs])
+    React.useEffect(()=>{
+        formref.current.cleanErrors();
+    },[tabObj])
 
 
     const handleSubmit = () => {
@@ -121,9 +117,9 @@ key information</div>
         </FormGroup>
         <FormGroup>
           <ButtonToolbar style={{ paddingLeft: '130px' }}>
-              <div className="autobtn" onClick={handleSubmit}>
+              <Button appearance="primary" onClick={handleSubmit} disabled={loading}>
               Submit
-              </div>
+              </Button>
           </ButtonToolbar>
         </FormGroup>
       </Form>
