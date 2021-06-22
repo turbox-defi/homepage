@@ -25,10 +25,13 @@ export default () => {
     set_state((old) => ({ ...old, loading: true }));
     getUserAlerts({ pageIndex: state.pageIndex })
       .then((rp) => {
-        set_state({
-          list: rp.paginationData,
-          pagination: rp.pagination,
-          loading: false,
+        set_state((old) => {
+          return {
+            ...old,
+            list: rp.paginationData,
+            pagination: rp.pagination,
+            loading: false,
+          };
         });
       })
       .catch((err) => {
@@ -39,19 +42,16 @@ export default () => {
 
   const set_page_index = (index) => {
     set_state((old) => ({ ...old, pageIndex: index }));
-  }
+  };
 
   return (
     <>
-      {state.loading ? (
-        <div style={{ width: "70%", margin: "0 auto" }}>
-          <Paragraph style={{ marginTop: 30 }} rows={10} >
-            <Loader center content="loading" />
-          </Paragraph>
-        </div>
-      ) : (
-        <Compon1 list={state.list} setPage={set_page_index} pagination={state.pagination}/>
-      )}
+      <Compon1
+        list={state.list}
+        loading={state.loading}
+        setPage={set_page_index}
+        pagination={state.pagination}
+      />
     </>
   );
 };

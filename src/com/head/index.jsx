@@ -50,7 +50,7 @@ export default () => {
             Exchange
           </a>
           <NavLink to="/alerts" activeStyle={seletedStyle}>
-            TurboAlerts
+            Alerts
           </NavLink>
           <a onClick={_click.bind(this, "http://docs.turbox.io")}>FAQ</a>
           {token ? (

@@ -35,7 +35,7 @@ const Index = () => {
       })
       .catch((err) => {
         console.log(err);
-        Alert.error("date init err!");
+        Alert.error("Data initialization failed!");
       });
   }, []);
 
@@ -44,7 +44,7 @@ const Index = () => {
       
       <div className={styles.box}>
         {state.loading && state.list.length === 0 ? (
-          <Loader backdrop content="loading..." vertical />
+          <Loader backdrop content="loading..."  vertical />
         ) : (
           <Switch>
             <Route path="/alerts/detail/:id">

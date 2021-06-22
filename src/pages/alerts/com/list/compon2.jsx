@@ -149,7 +149,7 @@ export default () => {
           <div className={styles.card}>
             <div className="card">
               <div className={styles.cartbox}>
-                {loading ? <Loader backdrop content="loading..." size="md"  vertical style={{zIndex: '1000'}}/> : null}
+                {loading ? <Loader backdrop content="loading..."   vertical style={{zIndex: '1000'}}/> : null}
                 <ul>
                   {state.list.map((item, index) => {
                     return (
