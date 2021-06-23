@@ -13,7 +13,7 @@ const pathResolve = pathUrl => path.join(__dirname, pathUrl);
 
 const uiTheme = {
   '@base-color': '#0260FF' ,
-  '@font-family-base': 'Alphakind',
+  '@font-family-base': 'Arial, sans-serif',
   '@B800': '#0E1427'
 }
 

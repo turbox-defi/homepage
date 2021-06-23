@@ -10,6 +10,8 @@ import { Button, Avatar, Icon, Dropdown } from "rsuite";
 import Cookies from "js-cookie";
 import { TOKENID, domanUrl } from "@config";
 
+import reactGAEvebt from '@/utils/GaReact';
+
 const seletedStyle = {
   color: "#3CFFFC",
 };
@@ -80,7 +82,8 @@ export default () => {
             <Button
               appearance="primary"
               onClick={() => {
-                history.push("/alerts/login");
+                reactGAEvebt(window.location.pathname,'navigation',0,'Go sign in');
+                history.push("/account/signin");
               }}
             >
               Sign in

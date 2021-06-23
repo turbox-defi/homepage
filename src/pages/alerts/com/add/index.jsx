@@ -10,6 +10,8 @@ import liststore from '../../contentstore';
 
 import formDateChange from '@/utils/formDateChange';
 
+import reactGAEvebt from '@/utils/GaReact';
+
 import { postAliert } from '@/http/alerts';
 
 import { useHistory } from "react-router-dom";
@@ -50,6 +52,7 @@ export default () => {
   },[seleted]);
 
   const _submit = (obj) => {
+    reactGAEvebt(window.location.pathname,'Report Details',0, `${seleted}-submit`);
     setLoading(true);
     postAliert(formDateChange(seleted,obj)).then(rp=>{
       setLoading(false);

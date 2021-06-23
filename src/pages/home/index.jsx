@@ -15,7 +15,7 @@ import Show9 from '@/com/Show9';
 function App() {
 
   return (
-    <>
+    <div style={{ fontFamily: "Alphakind", background: '#ffffff' }}>
       <Banner />
       <WeDo />
       <Show1 />
@@ -27,7 +27,7 @@ function App() {
       <Show7 />
       <Show8 />
       <Show9 />
-    </>
+    </div>
   );
 }
 

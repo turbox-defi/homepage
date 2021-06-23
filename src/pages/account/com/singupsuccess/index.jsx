@@ -5,6 +5,8 @@ import { Alert } from 'rsuite';
 import Cookies from 'js-cookie'
 import { TOKENID, domanUrl } from '@/config';
 
+import reactGAEvebt from '@/utils/GaReact';
+
 import { useHistory } from "react-router-dom";
 
 const _login = () => {
@@ -16,6 +18,8 @@ const _login = () => {
    let token = search.get('token');
 
    if(token){
+
+    reactGAEvebt(window.location.pathname,'active',0,'Sign in now');
     Cookies.set(TOKENID, token, { domain: domanUrl })
     window.location.href = '/alerts'
    }

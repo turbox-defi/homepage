@@ -6,10 +6,11 @@ import { TOKENID, domanUrl } from "@config";
 const instance = axios.create();
 
 const toLogin = () => {
-  window.localStorage.clear();
-  Alert.error("you need login");
+  Cookies.remove(TOKENID, { domain: domanUrl });
+  Alert.closeAll();
+  Alert.error("Join the TurboX to have full features");
   setTimeout(() => {
-    window.location.href = "/alerts/Login";
+    window.location.href = "/account/signin";
   }, 500);
 };
 

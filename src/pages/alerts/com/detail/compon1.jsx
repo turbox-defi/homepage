@@ -135,7 +135,7 @@ export default ({ data }) => {
             }}
           >
             <span className="iconfont">&#xe860;</span>
-            TurboAlerts
+            Alerts
           </div>
 
           <div className="card">

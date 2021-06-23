@@ -15,6 +15,8 @@ import * as styles from "./compon2.module.less";
 import { Subject } from "rxjs";
 import { switchMap } from "rxjs/operators";
 
+import reactGAEvebt from '@/utils/GaReact';
+
 import { getAlertsList } from "@/http/alerts";
 
 import NoThingImg from '@/assets/nothing.png';
@@ -80,6 +82,7 @@ export default () => {
 
   React.useEffect(() => {
     setLoading(true);
+    reactGAEvebt(window.location.pathname,'search',0, `pageindex: ${state.pageIndex} type: ${state.type} queryKey: ${state.queryKey}`);
     querydata$.current.next({
       pageIndex: state.pageIndex,
       type: state.type,

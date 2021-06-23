@@ -6,6 +6,8 @@ import bannerimg from "@/assets/banner.png";
 import Authority from "@/components/Authority";
 import { useHistory } from 'react-router-dom';
 
+import reactGAEvebt from '@/utils/GaReact';
+
 export default () => {
   let history = useHistory();
   return (
@@ -20,7 +22,10 @@ export default () => {
               further victimization and alerting future risks.­
             </p>
             <Authority>
-              <div className="autobtn" onClick={()=>{history.push('/alerts/add')}}>Report Now</div>
+              <div className="autobtn" onClick={()=>{
+                reactGAEvebt(window.location.pathname,'banner',0,'Go report Now');
+                history.push('/alerts/add');
+              }}>Report Now</div>
             </Authority>
           </div>
           <div className={styles.img}>

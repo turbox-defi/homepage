@@ -6,6 +6,8 @@ import { login } from '@/http/login';
 import Cookies from 'js-cookie'
 import { TOKENID, domanUrl, pwd_reg } from '@/config';
 
+import reactGAEvebt from '@/utils/GaReact';
+
 import {
   Form,
   FormGroup,
@@ -42,6 +44,7 @@ export default () => {
   const [formValue, set_formValue] = React.useState();
 
   const _submit = () => {
+    reactGAEvebt(window.location.pathname,'modal',0,'Sign in');
     if (!formref.current.check()) {
       return;
     }
@@ -57,12 +60,18 @@ export default () => {
       }
       if(err.data.code === 'AUTHORIZE_ACCOUNT_NOT_VERIFIED'){
         Alert.error("The account is not activated.");
-        window.location.href = `/alerts/signup?email=${formValue.account}`
+        window.location.href = `/account/signup?email=${formValue.account}`
       }
       
       
     })
   };
+
+  const _onKeyDown = (e) => {
+    if (e.keyCode == 13) {
+      _submit();
+    }
+  }
 
   return (
     <>
@@ -84,6 +93,7 @@ export default () => {
               <FormControl
                 name="account"
                 type="email"
+                onKeyDown={_onKeyDown}
                 placeholder="Please enter email address"
               />
             </InputGroup>
@@ -96,6 +106,7 @@ export default () => {
               <FormControl
                 name="password"
                 type="password"
+                onKeyDown={_onKeyDown}
                 placeholder="Please enter the password"
               />
             </InputGroup>
@@ -103,15 +114,21 @@ export default () => {
         </Form>
       </div>
       <div className={styles.forgot}>
-        <span onClick={()=>{window.location.href = '/alerts/reset_pwd_account';}}>Forgot password？</span>
+        <span onClick={()=>{
+          reactGAEvebt(window.location.pathname,'modal',0,'Go forgot password');
+          window.location.href = '/account/reset_pwd_account';
+        }}>Forgot password？</span>
       </div>
 
       <Button appearance="primary" block onClick={_submit}>
-        Confirm
+        Sign in
       </Button>
       <div className={styles.tosign}>
         <span>Don't have an account?</span>
-        <a href="/alerts/signup">Sign up now</a>
+        <a onClick={()=>{
+          reactGAEvebt(window.location.pathname,'modal',0,'Go sign up now');
+          window.location.href = '/account/signup'
+        }}> Sign up now</a>
       </div>
     </>
   );

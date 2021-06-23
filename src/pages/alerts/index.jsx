@@ -8,12 +8,7 @@ import Detail from "./com/detail";
 import Updata from "./com/updataAlert";
 import Add from "./com/add";
 import Myalerts from "./com/myalerts";
-import Login from "./com/login";
-import Singup from "./com/singup";
-import Resetpwd from "./com/resetpwd";
-import InputResetpwd from "./com/resetpwdinput";
-import Singupsuccess from "./com/singupsuccess";
-import LinkRrr from "./com/linkerr";
+
 
 import * as styles from "./index.module.less";
 
@@ -58,24 +53,6 @@ const Index = () => {
             </Route>
             <Route path="/alerts/updata/:id">
               <Updata />
-            </Route>
-            <Route path="/alerts/login">
-              <Login />
-            </Route>
-            <Route path="/alerts/signup">
-              <Singup />
-            </Route>
-            <Route path="/alerts/reset_pwd_account">
-              <Resetpwd />
-            </Route>
-            <Route path="/alerts/reset_password">
-              <InputResetpwd />
-            </Route>
-            <Route path="/alerts/verify_success">
-              <Singupsuccess />
-            </Route>
-            <Route path="/alerts/link_err">
-              <LinkRrr />
             </Route>
             <Route path="/">
               <List />

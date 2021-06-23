@@ -5,6 +5,8 @@ import errimg from '@/assets/err.png';
 import { Alert } from 'rsuite';
 import { useHistory } from "react-router-dom";
 
+import reactGAEvebt from '@/utils/GaReact';
+
 export default () => {
 
   const [ email, setEmail ] = React.useState(null);
@@ -13,6 +15,9 @@ export default () => {
   let history = useHistory();
 
   const _click = () => {
+
+    reactGAEvebt(window.location.pathname,'expired-'+type,0,'Resend  Link');
+
     if(email && type){
       if(type === 'verify'){
         history.push(`/alerts/signup?email=${email}`)

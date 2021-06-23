@@ -18,6 +18,7 @@ import {
   Icon,
   Loader,
 } from "rsuite";
+import reactGAEvebt from '@/utils/GaReact';
 
 const { StringType, NumberType } = Schema.Types;
 
@@ -29,6 +30,8 @@ export default () => {
   const [loading, set_loading] = React.useState(false);
 
   const _submit = () => {
+
+    reactGAEvebt(window.location.pathname,'modal',0,'Send Password Reset Link');
 
     if (!formref.current.check()) {
         return;
@@ -50,6 +53,12 @@ export default () => {
     })
 
 
+  }
+
+  const _onKeyDown = (e) => {
+    if (e.keyCode == 13) {
+      _submit();
+    }
   }
 
   return (
@@ -84,6 +93,7 @@ export default () => {
                   <FormControl
                     name="account"
                     type="email"
+                    onKeyDown={_onKeyDown}
                     placeholder="Please enter email address"
                   />
                 </InputGroup>

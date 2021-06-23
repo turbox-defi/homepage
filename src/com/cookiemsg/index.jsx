@@ -3,6 +3,7 @@
  */
 import { useEffect, useState, useCallback } from "react";
 import styles from "./style.module.less";
+import reactGAEvebt from '@/utils/GaReact';
 
 const _goPDF = () => {
   
@@ -19,6 +20,7 @@ export default () => {
   }, []);
 
   const setStrore = useCallback(() => {
+    reactGAEvebt(window.location.pathname,'Cookie policy',0,'I AGREE');
     localStorage.setItem("cookie", "true");
     setShow(false);
   }, []);

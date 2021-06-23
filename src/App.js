@@ -18,7 +18,10 @@ import 'rsuite/lib/styles/themes/dark/index.less';
 
 import './App.less';
 
+
+
 const DynamicComponent = lazy (() => import(`@pages/alerts`));
+const DynamicComponentAccount = lazy (() => import(`@pages/account`));
 
 function App() {
 
@@ -32,6 +35,11 @@ function App() {
           <Route path="/alerts">
             <Suspense fallback={<PageLoading />}>
                   <DynamicComponent />
+            </Suspense> 
+          </Route>
+          <Route path="/account">
+            <Suspense fallback={<PageLoading />}>
+                  <DynamicComponentAccount />
             </Suspense> 
           </Route>
           <Route path="/">

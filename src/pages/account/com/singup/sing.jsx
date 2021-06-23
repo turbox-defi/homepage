@@ -8,6 +8,8 @@ import { debounceTime, switchMap } from 'rxjs/operators';
 
 import { email_reg, pwd_reg } from '@/config';
 
+import reactGAEvebt from '@/utils/GaReact';
+
 import {
   Form,
   FormGroup,
@@ -85,6 +87,9 @@ export default ({ setemail }) => {
   },[])
 
   const _submit = () => {
+
+    reactGAEvebt(window.location.pathname,'modal',0,'Sign up submit');
+
     if (!formref.current.check() || emailcheck !== 'yes') {
       return;
     }
@@ -103,6 +108,12 @@ export default ({ setemail }) => {
       queryCheckEmail$.next(value)
     }else{
       set_emailcheck("none")
+    }
+  }
+
+  const _onKeyDown = (e) => {
+    if (e.keyCode == 13) {
+      _submit();
     }
   }
 
@@ -127,6 +138,7 @@ export default ({ setemail }) => {
               <FormControl
                 name="account"
                 type="email"
+                onKeyDown={_onKeyDown}
                 placeholder="Please enter email address"
                 onChange={account_change_check}
               />
@@ -146,6 +158,7 @@ export default ({ setemail }) => {
               <FormControl
                 name="password"
                 type="password"
+                onKeyDown={_onKeyDown}
                 placeholder="Please enter the password"
               />
             </InputGroup>
@@ -158,6 +171,7 @@ export default ({ setemail }) => {
               <FormControl
                 name="repeatPassword"
                 type="password"
+                onKeyDown={_onKeyDown}
                 placeholder="Please enter the password"
               />
             </InputGroup>
@@ -173,7 +187,10 @@ export default ({ setemail }) => {
       </Button>
       <div className={styles.tosign}>
         <span>Already have an account? </span>
-        <a href="/alerts/login">Sign in</a>
+        <a  onClick={()=>{
+          reactGAEvebt(window.location.pathname,'modal',0,'Go sign in');
+          window.location.href = "/account/signin"
+        }}>Sign in</a>
       </div>
     </>
   );

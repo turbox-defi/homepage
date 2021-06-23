@@ -69,7 +69,7 @@ export default () => {
                 description: <div>
                     Password reset successfully. Please sign in with new password.
                     <div style={{ marginTop :'20px' }}>
-                    <Button appearance="primary" onClick={()=>{ window.location.href="/alerts/login" }}>sin in</Button>
+                    <Button appearance="primary" onClick={()=>{ window.location.href="/account/signin" }}>sin in</Button>
                     </div>
                 </div>
             });
@@ -88,6 +88,12 @@ export default () => {
     }
 
   };
+
+  const _onKeyDown = (e) => {
+    if (e.keyCode == 13) {
+      _submit();
+    }
+  }
 
   return (
     <>
@@ -118,6 +124,7 @@ export default () => {
                   <FormControl
                     name="password"
                     type="password"
+                    onKeyDown={_onKeyDown}
                     placeholder="Please enter the password"
                   />
                 </InputGroup>
@@ -130,6 +137,7 @@ export default () => {
                   <FormControl
                     name="repeatPassword"
                     type="password"
+                    onKeyDown={_onKeyDown}
                     placeholder="Please enter the password"
                   />
                 </InputGroup>
