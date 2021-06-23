@@ -27,7 +27,7 @@ export const types = {
         name: 'Social Media',
         icon:  <span className="iconfont">&#xe639;</span>
     },
-    phishing_website: {
+    phishing_site: {
         name: 'Phishing Site',
         icon:  <span className="iconfont">&#xe63f;</span>
     },
