@@ -6,7 +6,7 @@ import classnames from "classnames";
 
 import { useHistory } from "react-router-dom";
 
-import TimeAgo from "react-timeago";
+import { format } from 'timeago.js';
 
 import { types } from "@/utils/types";
 
@@ -175,7 +175,9 @@ export default () => {
                           </span>
                           {/* <span> {item.approveTime}</span> */}
                           <span>
-                            <TimeAgo date={item.approveTime} local="zh_CN" />
+                            {
+                              format(item.approveTime, 'en_US')
+                            }
                           </span>
                         </div>
                       </li>

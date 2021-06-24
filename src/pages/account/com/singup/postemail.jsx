@@ -9,7 +9,7 @@ export default ({email}) => {
 
     const _click = () => {
         reset_sing_email(email).then(rp=>{
-            Alert.success("The email is sended successfully.")
+            Alert.success("The email was sent successfully.")
         }).catch(err=>{
             Alert.error("error")
         })

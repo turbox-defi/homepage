@@ -2,7 +2,7 @@ import React from "react";
 import * as styles from "./style.module.less";
 
 import { accountsing, checkLoginEmail } from '@/http/login';
-
+import { Checkbox } from 'rsuite';
 import { Subject } from 'rxjs';
 import { debounceTime, switchMap } from 'rxjs/operators';
 
@@ -53,7 +53,7 @@ const checkForm = Schema.Model({
         return false;
       }
       return true;
-    }, 'Those passwords didn’t match. Please Try again.')
+    }, 'These two passwords do not match. Please try again.')
     .isRequired('Please enter the password')
 });
 
@@ -61,6 +61,8 @@ export default ({ setemail }) => {
   const formref = React.useRef(null);
 
   const [loading, set_loading] = React.useState(false);
+
+  const [checkBox, set_checkBox] = React.useState(true);
 
   const [formValue, set_formValue] = React.useState({});
 
@@ -144,10 +146,10 @@ export default ({ setemail }) => {
               />
             </InputGroup>
             <ErrorMessage show={emailcheck === 'no'} >
-              <span style={{ color: 'red' }}><Icon icon="info" /> That Email is taken. Please Try another. </span>
+              <span style={{ color: 'red' }}><Icon icon="info" /> Email already exists. Please try another one. </span>
             </ErrorMessage>
             <ErrorMessage show={emailcheck === 'yes'} >
-              <span style={{ color: 'rgb(60, 255, 252)' }}><Icon icon="check-square" /> That Email is available. </span>
+              <span style={{ color: 'rgb(60, 255, 252)' }}><Icon icon="check-square" /> Email available </span>
             </ErrorMessage>
           </FormGroup>
           <FormGroup>
@@ -180,9 +182,15 @@ export default ({ setemail }) => {
       </div>
 
       <div className={styles.forgot}>
+        <Checkbox  checked={checkBox} onChange={(value, checked)=>{
+          set_checkBox(checked)
+        }}/> 
+        I have read and agree to 
+        <a target="_blank"  href="/TermsOfService_TurboX.pdf">Terms of Services</a>&
+        <a target="_blank"  href="/PrivacyPolicy_TurboX.pdf">Privacy Policy</a>
       </div>
 
-      <Button appearance="primary" block onClick={_submit}>
+      <Button appearance="primary" block onClick={_submit} disabled={!checkBox}>
         Submit
       </Button>
       <div className={styles.tosign}>

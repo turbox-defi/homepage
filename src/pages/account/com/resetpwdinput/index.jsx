@@ -36,7 +36,7 @@ const checkForm = Schema.Model({
         return false;
       }
       return true;
-    }, 'Those passwords didn’t match. Please Try again.')
+    }, 'These two passwords do not match. Please try again.')
     .isRequired('Please enter the password')
 });
 

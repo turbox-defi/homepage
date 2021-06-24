@@ -4,7 +4,7 @@ import * as styles from "./compon1.module.css";
 
 import { useHistory } from "react-router-dom";
 
-import TimeAgo from "react-timeago";
+import { format } from 'timeago.js';
 
 import ShowImg from "@/components/openimg";
 
@@ -45,7 +45,7 @@ const Content = ({ data }) => {
             <span className="iconfont">&#xe612;</span>
             {data.account}
           </span>
-          <span>{<TimeAgo date={data.approveTime} local="zh_CN" />}</span>
+          <span>{format(data.approveTime, 'en_US')}</span>
         </div>
       </div>
 
