@@ -11,7 +11,7 @@
 @font-face {
     font-family: 'iconfont';
     /* Project id 2520581 */
-    src: url('//at.alicdn.com/t/font_2520581_8onewd6h844.woff2?t=1623396206632') format('woff2'), url('//at.alicdn.com/t/font_2520581_8onewd6h844.woff?t=1623396206632') format('woff'), url('//at.alicdn.com/t/font_2520581_8onewd6h844.ttf?t=1623396206632') format('truetype'), url('//at.alicdn.com/t/font_2520581_8onewd6h844.svg?t=1623396206632#iconfont') format('svg');
+    src: url('//at.alicdn.com/t/font_2520581_usup52utowf.woff2?t=1624528847500') format('woff2'), url('//at.alicdn.com/t/font_2520581_usup52utowf.woff?t=1624528847500') format('woff'), url('//at.alicdn.com/t/font_2520581_usup52utowf.ttf?t=1624528847500') format('truetype'), url('//at.alicdn.com/t/font_2520581_usup52utowf.svg?t=1624528847500#iconfont') format('svg');
 }
 
 .iconfont {
@@ -279,4 +279,14 @@ ul {
 
 a:hover {
     cursor: pointer;
+}
+
+.autoiconbox {
+    width: 20px;
+    text-align: center;
+    font-size: 16px;
+}
+
+.showText {
+    white-space: pre-wrap;
 }

@@ -88,7 +88,9 @@ export default () => {
           <FormGroup>
             <InputGroup style={{ width: "400px" }}>
               <InputGroup.Addon>
-                <Icon icon="envelope-o" />
+                <div className="autoiconbox">
+                  <span className="iconfont">&#xe72d;</span>
+                </div>
               </InputGroup.Addon>
               <FormControl
                 name="account"
@@ -101,7 +103,9 @@ export default () => {
           <FormGroup>
             <InputGroup style={{ width: "400px" }}>
               <InputGroup.Addon>
-                <Icon icon="unlock-alt" />
+                <div className="autoiconbox">
+                  <span className="iconfont">&#xe66c;</span>
+                </div>
               </InputGroup.Addon>
               <FormControl
                 name="password"

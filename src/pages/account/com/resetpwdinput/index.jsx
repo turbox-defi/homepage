@@ -1,7 +1,7 @@
 import * as React from "react";
 import * as styles from "./style.module.less";
 import { reset_pwd_input } from "@/http/login";
-import { pwd_reg } from '@/config'
+import { pwd_reg } from "@/config";
 
 import {
   Form,
@@ -17,7 +17,7 @@ import {
   ErrorMessage,
   Icon,
   Loader,
-  Notification
+  Notification,
 } from "rsuite";
 
 const { StringType, NumberType } = Schema.Types;
@@ -27,8 +27,8 @@ const checkForm = Schema.Model({
     .minLength(8, "Use 8 characters or more for your password.")
     .maxLength(16, "Use 16 characters or less for your password.")
     .addRule((value, data) => {
-      return pwd_reg.test(value) ;
-    }, 'Use 8 or more characters with a mix of letters and numbers.')
+      return pwd_reg.test(value);
+    }, "Use 8 or more characters with a mix of letters and numbers.")
     .isRequired("Please enter the password"),
   repeatPassword: StringType()
     .addRule((value, data) => {
@@ -36,11 +36,9 @@ const checkForm = Schema.Model({
         return false;
       }
       return true;
-    }, 'These two passwords do not match. Please try again.')
-    .isRequired('Please enter the password')
+    }, "These two passwords do not match. Please try again.")
+    .isRequired("Please enter the password"),
 });
-
-
 
 export default () => {
   const formref = React.useRef(null);
@@ -55,45 +53,55 @@ export default () => {
     }
     var search = new URLSearchParams(window.location.search);
 
-    let token = search.get('token');
+    let token = search.get("token");
     set_loading(true);
-    if(token){
-        reset_pwd_input({
-            token: token,
-            ...formValue
-        }).then(rp=>{
-           if(rp.status == 200 && rp.data.code == 'SUCCESS'){
-            Notification['success']({
-                title: 'Success',
-                duration: 0,
-                description: <div>
-                    Password reset successfully. Please sign in with new password.
-                    <div style={{ marginTop :'20px' }}>
-                    <Button appearance="primary" onClick={()=>{ window.location.href="/account/signin" }}>sin in</Button>
-                    </div>
+    if (token) {
+      reset_pwd_input({
+        token: token,
+        ...formValue,
+      })
+        .then((rp) => {
+          if (rp.status == 200 && rp.data.code == "SUCCESS") {
+            Notification["success"]({
+              title: "Success",
+              duration: 0,
+              description: (
+                <div>
+                  Password reset successfully. Please sign in with new password.
+                  <div style={{ marginTop: "20px" }}>
+                    <Button
+                      appearance="primary"
+                      onClick={() => {
+                        window.location.href = "/account/signin";
+                      }}
+                    >
+                      Sign in
+                    </Button>
+                  </div>
                 </div>
+              ),
             });
-           }else{
-            Alert.error("post err")
-           }
-            set_loading(false);
-        }).catch(err=>{
-            console.log(err);
-            Alert.error("post err")
-            set_loading(false);
+          } else {
+            Alert.error("post err");
+          }
+          set_loading(false);
         })
-    }else{
-        Alert.error("token is nodata")
-        set_loading(false);
+        .catch((err) => {
+          console.log(err);
+          Alert.error("post err");
+          set_loading(false);
+        });
+    } else {
+      Alert.error("token is nodata");
+      set_loading(false);
     }
-
   };
 
   const _onKeyDown = (e) => {
     if (e.keyCode == 13) {
       _submit();
     }
-  }
+  };
 
   return (
     <>
@@ -119,7 +127,9 @@ export default () => {
               <FormGroup>
                 <InputGroup style={{ width: "400px" }}>
                   <InputGroup.Addon>
-                    <Icon icon="unlock-alt" />
+                    <div className="autoiconbox">
+                      <span className="iconfont">&#xe66c;</span>
+                    </div>
                   </InputGroup.Addon>
                   <FormControl
                     name="password"
@@ -132,7 +142,9 @@ export default () => {
               <FormGroup>
                 <InputGroup style={{ width: "400px" }}>
                   <InputGroup.Addon>
-                    <Icon icon="unlock-alt" />
+                    <div className="autoiconbox">
+                      <span className="iconfont">&#xe66c;</span>
+                    </div>
                   </InputGroup.Addon>
                   <FormControl
                     name="repeatPassword"
@@ -145,7 +157,7 @@ export default () => {
             </Form>
             <div style={{ marginTop: "0.4rem" }}></div>
             <Button appearance="primary" block onClick={_submit}>
-              Send Password Reset Link
+              Confirm
             </Button>
           </div>
         </div>

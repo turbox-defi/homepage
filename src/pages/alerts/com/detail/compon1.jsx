@@ -64,7 +64,7 @@ const Content = ({ data }) => {
           <tr>
             <th>Description</th>
             <td>
-              <p>{data.content}</p>
+              <p className="showText">{data.content}</p>
             </td>
           </tr>
           {data.images.length > 0 ? (

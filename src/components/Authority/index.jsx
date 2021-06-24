@@ -16,7 +16,7 @@ export default ({children}) => {
             Notification.info({
                 title: 'message',
                 description: <div>
-                    <span>Join the TurboX to have full features</span><br/>
+                    <span>Join TurboX to unlock more features</span><br/>
                     <div style={{ marginTop: '10px' }}>
                     <Button appearance="primary" onClick={()=>{
                         reactGAEvebt(window.location.pathname,'Notification',0,'Go sign in');
