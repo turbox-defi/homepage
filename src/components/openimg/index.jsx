@@ -7,7 +7,9 @@ export default ({ children }) => {
 
 
     useEffect(()=>{
-        new Viewer(domref.current)
+        new Viewer(domref.current,{
+            toolbar: false
+        })
     },[])
 
     return (
