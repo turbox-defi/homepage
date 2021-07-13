@@ -57,6 +57,28 @@
 
 @media screen and (min-width:1200px) {
     .box {
+        padding-bottom: 100px;
+        .content {
+            width: 80%;
+            min-width: 1000px;
+            &>div:nth-child(2) {
+                h2 {
+                    line-height: 1.5em;
+                    font-size: 2.5em;
+                }
+                p {
+                    font-size: 1.3em;
+                    line-height: 1.3em;
+                    margin-top: 30px;
+                }
+            }
+        }
+    }
+}
+
+
+@media screen and (min-width:1600px) {
+    .box {
         padding-bottom: 200px;
         .content {
             // width: 80%;

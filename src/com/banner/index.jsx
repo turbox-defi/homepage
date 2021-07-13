@@ -17,9 +17,9 @@ export default () => {
         <div className={styles.content}>
           <h1>One-stop Investment Platform</h1>
           <h1 style={{ color: "#3CFFFC" }}>When AI meets DeFi</h1>
-          <div className={styles.more} onClick={_click}>
+          {/* <div className={styles.more} onClick={_click}>
             Learn More
-          </div>
+          </div> */}
           <Banner list={[svgimg,svg2img]}/>
         </div>
       </div>

@@ -12,10 +12,10 @@
         flex-direction: column;
         padding-bottom: 100px;
         h1 {
-            font-size: 40px;
+            font-size: 3em;
             font-weight: bold;
             color: #DEF5FF;
-            line-height: 60px;
+            line-height: 2em;
         }
         .more {
             background: #0260FF;
@@ -45,8 +45,8 @@
         .content {
             width: 100%;
             h1 {
-                font-size: 20px;
-                line-height: 35px;
+                font-size: 2em;
+                line-height: 1em;
             }
             .imgs {
                 margin-top: 50px;
@@ -58,12 +58,27 @@
 @media screen and (min-width:1200px) {
     .box {
         .content {
-            width: 1200px;
+            width: 80%;
+            min-width: 1000px;
             h1 {
-                font-size: 66px;
+                font-size: 2.5em;
                 font-weight: bold;
                 color: #DEF5FF;
-                line-height: 100px;
+                line-height: 1.5em;
+            }
+        }
+    }
+}
+
+@media screen and (min-width:1600px) {
+    .box {
+        .content {
+            width: 1200px;
+            h1 {
+                font-size: 3em;
+                font-weight: bold;
+                color: #DEF5FF;
+                line-height: 2em;
             }
         }
     }

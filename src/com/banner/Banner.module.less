@@ -4,7 +4,7 @@
     margin: 0 auto;
     /* height: 100vh; */
     overflow: hidden;
-    padding-top: 50px;
+    padding-top: 2em;
 }
 
 .showlist {
@@ -17,6 +17,7 @@
     flex-shrink: 0;
     &>img{
         width: 100%;
+        max-height: 70vh;
     }
 }
 
@@ -47,13 +48,41 @@
 @media screen and (max-width:560px) {
     .bannerbox{
         width: 95vw;
-        padding-top: 30px;
+        padding-top: 1.5em;
+    }
+
+    .showlist>div {
+        width: 100%;
+        flex-shrink: 0;
+        &>img{
+            width: 100%;
+            max-height: 65vh;
+        }
     }
 }
 
 @media screen and (min-width:1200px) {
     .bannerbox{
-        width: 1200px;
+        width: 80%;
+        min-width: 1000px;
+        padding-top: 1.5em;
+    }
+
+    .showlist>div {
+        width: 100%;
+        flex-shrink: 0;
+        &>img{
+            width: 100%;
+            max-height: 65vh;
+        }
+    }
+    
+    
+}
+
+@media screen and (min-width:1600px) {
+    .bannerbox{
+        width: 80%;
     }
     
 }

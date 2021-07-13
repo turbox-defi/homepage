@@ -11,7 +11,7 @@
     h2 {
         font-weight: 400;
         color: #8F92AA;
-        font-size: 26px;
+        font-size: 1.5em;
         text-align: center;
     }
     .content {
@@ -28,7 +28,7 @@
     .list {
         display: flex;
         justify-content: space-around;
-        margin-top: 180px;
+        margin-top: 100px;
         flex-wrap: wrap;
         &>div {
             display: flex;
@@ -63,7 +63,7 @@
             flex-wrap: wrap;
             margin-top: 40px;
             &>div {
-                width: 150px;
+                width: 100px;
                 margin-top: 30px;
                 h3 {}
                 p {}
@@ -76,17 +76,42 @@
     .box {
         .content {
             width: 80%;
-            min-width: 1200px;
+            min-width: 1000px;
             .msg {
-                font-size: 40px;
-                line-height: 60px;
+                font-size: 1.5em;
+                line-height: 1.5em;
             }
         }
         .list {
             &>div {
-                width: calc( 100% / 4 - 50px);
-                min-width: 200px;
-                max-width: 300px;
+                width: 150px;
+                h3 {
+                    font-size: 1.3em;
+                    line-height: 1em;
+                }
+                p {
+                    font-size: 1em;
+                    line-height: 1.3em;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width:1600px) {
+    .box {
+        .content {
+            min-width: 1200px;
+            .msg {
+                font-size: 2em;
+                line-height: 1.5em;
+            }
+        }
+        .list {
+            &>div {
+                // width: calc( 100% / 4 - 50px);
+                // min-width: 40px;
+                width: 200px;
                 h3 {
                     font-size: 24px;
                     line-height: 26px;
